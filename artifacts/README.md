@@ -6,6 +6,7 @@ This directory captures the research completed on 22 September 2026 for **Build 
 - `verification.md` — rendered-site inspection, public API comparison, known inconsistencies, and evidence.
 - `sources.md` — source register with official URLs and how each source is useful.
 - `track-selection.md` — capability profile, EDA design principles, track fit matrix, and the Track 5 decision (26 September 2026).
+- `architecture.md` — Track 5 product architecture (Vercel + Google Cloud hybrid), components, data, build order, demo path.
 - `deep-research-tracks.md` — deep research across all five tracks: first-edition winners, crowding, data realism, scorecard; confirms Track 5.
 - `track5-feasibility-spike.md` — Track 5 data verification, exposure-model spike results, backtest design, and setup status.
 - `private/` — gitignored client-internal reference notes; never publish.
