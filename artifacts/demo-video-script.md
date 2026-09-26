@@ -1,9 +1,9 @@
 # ShadowCast demo video script (Team Argmax)
 
-**Target length:** 4:10. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
-**Narration:** about 580 words at roughly 140 words a minute.
+**Target length:** 4:15. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
+**Narration:** about 600 words at roughly 140 words a minute.
 **Record at:** https://shadowcast-two.vercel.app, full screen at 1920×1080.
-**Slides used:** the ShadowCast pitch deck, for the title card and the closing architecture.
+**Slides used:** the ShadowCast pitch deck, for the cover, the solution slide and the closing architecture.
 
 Before recording:
 - Open the site once so the Cloud Run geo service is warm.
@@ -19,14 +19,14 @@ Before recording:
 **Say:**
 > In May 2019, Cyclone Fani hit Puri. Odisha evacuated 1.2 million people in time, and that was a triumph. But eleven days later, Puri district still had no power: hospitals, water works, shelters. The warnings said where the storm would go. Nobody said what it would break.
 
-## 0:20–0:35 · Who and what
+## 0:20–0:40 · The solution
 
-**Show:** deck slide 1 (cover), held for about 5 s, then back to the console.
+**Show:** deck slide 1 (cover) for about 3 s, then slide 4 (the solution) for about 12 s, then back to the console.
 
 **Say:**
-> I'm Sathya, and this is Team Argmax. ShadowCast is impact-based cyclone forecasting, site by site. It predicts, prioritises and helps you prepare, and then it proves itself against satellites.
+> I'm Sathya, and this is Team Argmax. ShadowCast tells a district officer which hospitals, shelters and substations a cyclone will knock out, and when, up to sixty-eight hours ahead. It learns from real outages seen by satellite, drafts the alert with Gemini, and checks itself after every storm.
 
-## 0:35–1:35 · Predict and Prioritise
+## 0:40–1:40 · Predict and Prioritise
 
 **Show:**
 1. Storm select: **Fani 2019 · Odisha coast**. The replay strip is on **Best track**.
@@ -45,7 +45,7 @@ Before recording:
 >
 > *(click #1)* And every rank comes with reasons. Modelled peak wind, 126 knots. The storm passes nine kilometres away. Gales arrive sixteen hours before landfall. Eight thousand people live nearby.
 
-## 1:35–2:40 · Prepare
+## 1:40–2:45 · Prepare
 
 **Show:**
 1. With Mot shelter selected, open the **Prepare** tab and click the suggestion **"Why is Mot shelter (Bramhagiri) ranked #1?"**. Let the answer stream.
@@ -65,7 +65,7 @@ Before recording:
 >
 > *(let the audio play)*
 
-## 2:40–3:20 · Prove
+## 2:45–3:25 · Prove
 
 **Show:**
 1. Open the **Prove** tab on Fani: the AUC tile and the night-light loss by wind band chart.
@@ -81,7 +81,7 @@ Before recording:
 >
 > *(Amphan)* On Amphan in Bengal it fails, at 0.44, and we publish that. That's what Prove is for: it tells an officer to recalibrate before trusting the model on a new grid.
 
-## 3:20–3:45 · Real forecasts
+## 3:25–3:50 · Real forecasts
 
 **Show:**
 1. Storm select **Dana 2024**. On the replay strip, click **T−68h**: the ensemble tracks fan out.
@@ -90,7 +90,7 @@ Before recording:
 **Say:**
 > And it works with real forecasts. This is Cyclone Dana with ECMWF's ensemble, exactly as it was issued, sixty-eight hours before landfall. Instead of one line, every site gets the share of forecast tracks that bring it gales. As the issue times advance, you watch the uncertainty tighten.
 
-## 3:45–4:10 · Architecture and close
+## 3:50–4:15 · Architecture and close
 
 **Show:** deck slide 10 (architecture), then slide 12 (the ask), and end on the live URL.
 
