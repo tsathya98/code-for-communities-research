@@ -123,7 +123,7 @@ This uses plain pnpm plus uv workspaces. Nx can wrap it later if it earns its ke
 | M0 | Feed archiver live ✅ | Done 26 Sep: 4/4 sources archived; every 6 h |
 | M1 | Geo service v0 ✅ | Done 26 Sep: live on Cloud Run; Fani and Dana scenarios; 3,325 assets ranked with P(outage) and reasons. Fani AUC 0.97 after the 15-minute track densification (eyewall fix). Next: ECMWF ensemble as issued (probabilistic), Amphan held-out test |
 | M2 | Console v0 | Map + timeline + ranked list on Vercel (Predict/Prioritise) |
-| M3 | Agent + Prepare | Advisory drafted in CAP 1.2 (en/or), approve → Firestore audit → Odia audio |
+| M3 | Agent + Prepare ✅ | Done 26 Sep: Gemini 3.8 Flash duty analyst (explains ranks via geo tools; hindsight hidden in forecast replays); CAP 1.2 advisory in en/hi/or validated by schema; HMAC-signed officer approval; append-only Firestore audit (approvals and rejections); Gemini-TTS Odia audio (55 s clip). Vertex 429s under bursts, handled with retries |
 | M4 | Prove | Backtest panel + post-event verification with SAR/NTL tiles and Gemini evidence |
 | M5 | Live mode + polish | GDACS/SACHET live scenario, second storm (Montha), demo video, deck |
 
