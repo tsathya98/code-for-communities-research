@@ -8,15 +8,14 @@ Persistent context for Team Argmax's entry to **Build with AI: Code for Communit
 - [`artifacts/verification.md`](artifacts/verification.md) — browser review of the official page and comparison with its public event API.
 - [`artifacts/sources.md`](artifacts/sources.md) — primary sources and data-use guidance.
 - [`artifacts/hack2skill-event-details-api.json`](artifacts/hack2skill-event-details-api.json) — raw snapshot of the public event endpoint captured on 22 September 2026.
+- [`artifacts/track-selection.md`](artifacts/track-selection.md) — builder capability profile, EDA (Exception → Drilldown → Action) design spine, track fit matrix, and the Track 5 decision.
+- [`artifacts/track5-feasibility-spike.md`](artifacts/track5-feasibility-spike.md) — verified data sources, exposure-model results, backtest design, open risks, and GCP setup status.
+- [`spikes/`](spikes/) — runnable spike code (`fani_exposure.py`); downloaded inputs in `spikes/data/` are gitignored.
+- `artifacts/private/` — client-internal reference notes (gitignored; never publish).
 
 ## Status
 
-Research complete. The recommended solo-team starting points are:
-
-1. **Track 5 — Cyclone Impact & Infrastructure Vulnerability Forecaster**, using a transparent historical-scenario replay for one coastal district; or
-2. **Track 1 — AI for Digital Public Infrastructure & Governance**, using a multilingual citizen-signal-to-officer-decision workflow.
-
-Read the intelligence brief before selecting a direction: it distinguishes official requirements from assumptions and flags a 10-August versus 11-August submission-start discrepancy in the official materials.
+**Track 5 selected (26 Sep 2026)** — Cyclone Impact & Infrastructure Vulnerability Forecaster, piloted as a Cyclone Fani (2019) replay over Puri district, Odisha. The no-credential feasibility spike is complete; checks that need Earth Engine, Gemini, and TTS access are next. GCP project: `argmax-cyclone-2026`.
 
 ## Official links
 

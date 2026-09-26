@@ -5,6 +5,9 @@ This directory captures the research completed on 22 September 2026 for **Build 
 - `hackathon-intelligence.md` — the working brief: rules, timetable, scoring, every track, solution interpretation, solo-team strategy, and decision guidance.
 - `verification.md` — rendered-site inspection, public API comparison, known inconsistencies, and evidence.
 - `sources.md` — source register with official URLs and how each source is useful.
+- `track-selection.md` — capability profile, EDA design principles, track fit matrix, and the Track 5 decision (26 September 2026).
+- `track5-feasibility-spike.md` — Track 5 data verification, exposure-model spike results, backtest design, and setup status.
+- `private/` — gitignored client-internal reference notes; never publish.
 - `hack2skill-event-details-api.json` — unmodified response captured from the site's publicly accessible event-details endpoint. This is a large CMS payload, not a private export.
 
 ## Fast read

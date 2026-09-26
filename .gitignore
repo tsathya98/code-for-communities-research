@@ -6,3 +6,9 @@ Thumbs.db
 node_modules/
 dist/
 build/
+
+# Client-internal reference notes (never publish)
+artifacts/private/
+
+# Re-downloadable spike data (IBTrACS, OSM, OSDMA, PDFs)
+spikes/data/
