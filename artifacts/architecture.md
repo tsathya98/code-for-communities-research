@@ -121,7 +121,7 @@ This uses plain pnpm plus uv workspaces. Nx can wrap it later if it earns its ke
 | # | Milestone | Done when |
 |---|---|---|
 | M0 | Feed archiver live ✅ | Done 26 Sep: 4/4 sources archived; every 6 h |
-| M1 | Geo service v0 | `/rank/fani?region=coast` returns ranked assets with P(outage), deployed on Cloud Run |
+| M1 | Geo service v0 ✅ | Done 26 Sep: live on Cloud Run; Fani and Dana scenarios; 3,325 assets ranked with P(outage) and reasons. Fani AUC 0.97 after the 15-minute track densification (eyewall fix). Next: ECMWF ensemble as issued (probabilistic), Amphan held-out test |
 | M2 | Console v0 | Map + timeline + ranked list on Vercel (Predict/Prioritise) |
 | M3 | Agent + Prepare | Advisory drafted in CAP 1.2 (en/or), approve → Firestore audit → Odia audio |
 | M4 | Prove | Backtest panel + post-event verification with SAR/NTL tiles and Gemini evidence |
