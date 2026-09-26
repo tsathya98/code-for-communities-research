@@ -1,14 +1,16 @@
-"""Feasibility spike (credentialed): Earth Engine backtest + Gemini multimodal evidence reading for Fani/Puri.
+"""Feasibility spike (credentialed): Earth Engine backtest + Gemini multimodal evidence reading for Cyclone Fani.
 
 1. Night-light backtest: VIIRS VNP46A2 radiance around each OSM substation, pre (20 Apr-1 May 2019) vs
-   post (4-10 May 2019), compared with the Holland peak wind from fani_exposure.py (Spearman rank correlation).
-2. SAR evidence tile: Sentinel-1 VV same-orbit pre (22 Apr) / post (4 May) RGB composite exported as a PNG and
-   read by gemini-3.7-flash into a structured evidence record.
-Prereqs: ADC with quota project argmax-cyclone-2026; run fani_exposure.py first.
-Run from the spikes directory: uv run --with earthengine-api --with google-genai --with pandas --with requests python gee_gemini_check.py
+   post (4-10 May 2019), compared with substation and feeder-line Holland peak wind from fani_exposure.py
+   (Spearman rank correlation for all and lit substations, plus loss by wind band).
+2. SAR evidence tile (puri region only): Sentinel-1 VV same-orbit pre (22 Apr) / post (4 May) RGB composite exported as a PNG and
+   read by Gemini (MODEL) into a structured evidence record.
+Prereqs: ADC with quota project argmax-cyclone-2026; run fani_exposure.py <region> first.
+Run from the spikes directory: uv run --with earthengine-api --with google-genai --with pandas --with requests python gee_gemini_check.py [puri|coast]
 """
 
 import json
+import sys
 from pathlib import Path
 
 import ee
@@ -19,6 +21,9 @@ from google.genai import types
 from pydantic import BaseModel
 
 PROJECT = "argmax-cyclone-2026"
+MODEL = "gemini-3.8-flash"
+LIT_RADIANCE = 1.0  # nW/cm2/sr; below this, percentage loss is dominated by noise
+WIND_BINS = [0, 60, 80, 100, 130]
 DATA = Path(__file__).parent / "data"
 PURI = [85.6, 19.7, 86.2, 20.1]
 NTL_BAND = "DNB_BRDF_Corrected_NTL"
@@ -41,13 +46,16 @@ class SarEvidence(BaseModel):
     limitations: str
 
 
-def nightlight_backtest() -> pd.DataFrame:
-    """Measure post-landfall night-light loss per substation and correlate it with modelled peak wind.
+def nightlight_backtest(region: str) -> pd.DataFrame:
+    """Measure post-landfall night-light loss around each substation of a region.
+
+    Args:
+        region (str): Region key used by fani_exposure.py (reads data/fani_{region}_exposure.csv).
 
     Returns:
-        pd.DataFrame: substations with max_wind_kt, ntl_pre, ntl_post and ntl_loss_pct.
+        pd.DataFrame: substations with max_wind_kt, line_max_wind_kt, ntl_pre, ntl_post and ntl_loss_pct.
     """
-    exposure = pd.read_csv(DATA / "fani_puri_exposure.csv")
+    exposure = pd.read_csv(DATA / f"fani_{region}_exposure.csv")
     subs = exposure[exposure.kind == "substation"].reset_index(drop=True)
     points = ee.FeatureCollection([
         ee.Feature(ee.Geometry.Point([r.lon, r.lat]).buffer(1500), {"idx": i}) for i, r in subs.iterrows()
@@ -62,7 +70,8 @@ def nightlight_backtest() -> pd.DataFrame:
     values = pd.DataFrame([f["properties"] for f in stats]).set_index("idx").sort_index().reindex(range(len(subs)))
     subs["ntl_pre"], subs["ntl_post"] = values.get("pre").to_numpy(), values.get("post").to_numpy()
     subs["ntl_loss_pct"] = (100 * (1 - subs.ntl_post / subs.ntl_pre)).round(1)
-    return subs[["name", "lat", "lon", "min_dist_km", "max_wind_kt", "ntl_pre", "ntl_post", "ntl_loss_pct"]]
+    return subs[["name", "lat", "lon", "min_dist_km", "max_wind_kt", "line_max_wind_kt", "ntl_pre", "ntl_post",
+                 "ntl_loss_pct"]]
 
 
 def sar_evidence() -> SarEvidence:
@@ -91,7 +100,7 @@ def sar_evidence() -> SarEvidence:
         "Describe the notable change regions, stay conservative, and state limitations of a single SAR pair."
     )
     response = client.models.generate_content(
-        model="gemini-3.7-flash",
+        model=MODEL,
         contents=[types.Part.from_bytes(data=png, mime_type="image/png"), prompt],
         config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=SarEvidence,
                                            thinking_config=types.ThinkingConfig(thinking_level="low")),
@@ -100,19 +109,27 @@ def sar_evidence() -> SarEvidence:
 
 
 def main() -> None:
-    """Run both credentialed checks and print their results; writes CSV/PNG/JSON outputs under data/.
+    """Run the credentialed checks for the region on the command line; writes CSV/PNG/JSON outputs under data/.
 
     Returns:
         None
     """
+    region = sys.argv[1] if len(sys.argv) > 1 else "puri"
     ee.Initialize(project=PROJECT)
-    subs = nightlight_backtest()
-    subs.to_csv(DATA / "fani_substation_ntl_backtest.csv", index=False)
-    print(subs.sort_values("max_wind_kt", ascending=False).to_string(index=False))
+    subs = nightlight_backtest(region)
+    subs.to_csv(DATA / f"fani_{region}_ntl_backtest.csv", index=False)
     valid = subs.dropna(subset=["ntl_loss_pct"])
-    spearman = valid.max_wind_kt.rank().corr(valid.ntl_loss_pct.rank())
-    print(f"\nSpearman(max_wind_kt, ntl_loss_pct) = {spearman:.2f}"
-          f"  (n={len(valid)}, median loss {valid.ntl_loss_pct.median():.0f}%)")
+    lit = valid[valid.ntl_pre >= LIT_RADIANCE]
+    for label, frame in (("all", valid), (f"lit, pre >= {LIT_RADIANCE}", lit)):
+        for wind in ("max_wind_kt", "line_max_wind_kt"):
+            pair = frame.dropna(subset=[wind])
+            print(f"Spearman({wind}, ntl_loss_pct) [{label}] = {pair[wind].rank().corr(pair.ntl_loss_pct.rank()):.2f}"
+                  f"  n={len(pair)}")
+    by_band = lit.groupby(pd.cut(lit.max_wind_kt, WIND_BINS), observed=True).ntl_loss_pct
+    print("\nlit substations: night-light loss % by modelled substation wind (kt)")
+    print(by_band.describe()[["count", "25%", "50%", "75%"]].round(1).to_string())
+    if region != "puri":
+        return
 
     evidence = sar_evidence()
     (DATA / "fani_sar_evidence.json").write_text(evidence.model_dump_json(indent=2))
