@@ -17,7 +17,18 @@ Pilot: Cyclone Fani (2019) replayed over Puri district, Odisha. Feasibility evid
 
 **Gap:** no prior Gemini / Vertex AI / Earth Engine / Cloud Run usage — deliberately closed by this build.
 
-## The unifying design spine: EDA (Exception → Drilldown → Action)
+## Pitch framing (what judges hear)
+
+- **Credibility anchor: impact-based forecasting.** This is WMO's term and IMD has adopted the approach. Slogan: *"Forecasts tell you what the weather will **be**. We tell you what it will **do**."*
+- **Product loop: Predict → Prioritise → Prepare → Prove.**
+  - **Predict:** hazard at every asset.
+  - **Prioritise:** ranked, explained assets at risk.
+  - **Prepare:** typed actions and a local-language advisory, dispatched only after an officer approves.
+  - **Prove:** post-event satellite verification plus the historical backtest. This is the differentiator.
+- **Opening line:** *"A post-mortem, written 48 hours before the storm."* Alternative: *"Triage for a coastline."*
+- **Never use "EDA" in anything judges see.** The acronym reads as Exploratory Data Analysis, and "Exception → Drilldown → Action" is internal client framing, not a standard term. It stays below only as the internal design checklist.
+
+## Internal design checklist (Exception → Drilldown → Action)
 
 Every track has this shape, and it is the direct antidote to "dashboard + chatbot" entries. Principles carried over from prior agentic-reporting design work:
 
