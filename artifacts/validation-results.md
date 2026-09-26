@@ -50,11 +50,38 @@ The pipeline checks out: track, landfall and windows are all correct. What fails
 - **Claim we cannot make:** that it transfers to another state's grid. Amphan says it does not, at least without inland wind decay and grid-specific calibration.
 - **Pitch framing:** "Prove" is the product feature that catches exactly this. The satellite check shows when a model calibrated on one grid is wrong on another, which tells officials to recalibrate before relying on it.
 
-## Options (awaiting decision)
+## 3. Decision and outcome (26 Sep 2026)
 
-1. **Physics fix, then an untouched test storm.**
-   - Add a standard inland decay (Kaplan–DeMaria 1995) and a land-roughness reduction to the wind model. Both come from the literature and are not tuned on Amphan.
-   - Re-score Amphan with the same Fani-fitted model.
-   - Add a third storm not yet examined (Hudhud 2014 over Visakhapatnam, or Yaas 2021) as the clean test.
-2. **Show Amphan as it is.** Publish the scenario with its failing score and the diagnosis. This is honest, and it demonstrates that "Prove" works.
-3. **Keep Amphan in the docs only.**
+**Decision:** the user chose "physics fix, then an untouched test storm".
+
+**Step 1: freeze the physics before scoring.** Commit `0d07569` added two changes, both taken from the literature:
+- inland decay (Kaplan & DeMaria 1995: Vb 26.7 kt, α 0.095/h, R 0.9), applied only where lower than the best track;
+- terrain roughness (ESA WorldCover mapped to Wieringa 1993 roughness lengths, log-mean over a 1 km fetch, ESDU conversion).
+
+**Step 2: score it, and reject it on the pre-agreed criterion (Fani spatial holdout).**
+
+| | Original | Physics fix |
+|---|---|---|
+| Fani, in sample | 0.973 | 0.914 |
+| Fani, spatial holdout | **0.969** | **0.867** |
+| Amphan | 0.435 | 0.384 |
+| Hudhud (seen under this model only) | — | 0.727 |
+
+Roughness lowers modelled wind over built-up land, yet Puri's built-up substations went dark. The change was reverted in `e4e2642`.
+
+**Step 3: final scores with the original model.** It is fitted once on Fani, and Hudhud is scored once with it.
+
+| Storm | Test | AUC | Brier | Spearman | Went dark |
+|---|---|---|---|---|---|
+| Fani 2019 | In sample | 0.973 | 0.049 | 0.65 | 22% |
+| Fani 2019 | Spatial holdout | 0.969 | 0.050 | — | — |
+| **Hudhud 2014** (Visakhapatnam) | Untouched test | **0.793** | 0.190 | 0.56 | 76% |
+| Amphan 2020 | Held out | 0.435 | 0.278 | −0.02 | 28% |
+| Dana 2024 | Held out, weak | 0.32 (5 positives: meaningless) | 0.020 | — | 2% |
+
+**Caveat, stated openly:** Hudhud's score under the rejected model was seen before the revert. The accept/reject decision rested on the Fani holdout, which does not involve Hudhud.
+
+**Claims we can make:**
+- Generalises across the reference coast.
+- Transfers to another state's grid for a direct strong hit (Hudhud 0.79).
+- Fails for Amphan (inland saturation plus the rural grid failing widely). This is published as it is, and "Prove" is framed as the step that catches such misses.
