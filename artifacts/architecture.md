@@ -38,9 +38,9 @@
 │   /scenarios /hazard /rank /evidence       WorldPop, Open Buildings) · getMapId tiles      │
 │   /backtest /verify /tiles                                                                  │
 │                                                                                            │
-│ Cloud Run Job: feed-archiver (every 6 h, Cloud Scheduler)                                  │
-│   GDACS events · NDMA SACHET CAP RSS · ECMWF track BUFR (kept ~4 days upstream) ·          │
-│   WeatherNext 2 ensemble snapshot (Open-Meteo) · IBTrACS provisional                       │
+│ Cloud Run Job: feed-archiver (every 6 h, Cloud Scheduler) — LIVE since 26 Sep              │
+│   GDACS events · NDMA SACHET CAP alerts · WeatherNext 2 ensemble snapshot (Open-Meteo) ·   │
+│   IBTrACS active  (ECMWF tracks: full history already on gs://ecmwf-open-data)             │
 │                                                                                            │
 │ Cloud Storage: scenario artifacts (tracks, hazard grids, asset tables, backtests), archive │
 │ Firestore: advisories, approvals, audit log (append-only), action states                   │
@@ -73,9 +73,10 @@ FastAPI, grown directly from `spikes/fani_exposure.py` and `spikes/gee_gemini_ch
 - Asset score = P(impact) × criticality weight (hospital > substation > shelter > school) × population served (WorldPop in a buffer).
 - Every output carries a model version and data timestamps.
 
-### Feed archiver (Cloud Run Job + Scheduler): `services/archiver`
-- **Start first.** ECMWF track files expire upstream after about 4 days, so if an October/November storm forms, we need the as-issued forecasts.
-- Writes raw feeds to `gs://…/archive/{source}/{yyyy-mm-dd-hh}/`.
+### Feed archiver (Cloud Run Job + Scheduler): `services/archiver` — **live since 26 Sep 2026**
+- Snapshots the feeds that have no public history, so a live storm can later be replayed as-issued: GDACS, NDMA SACHET CAP, WeatherNext 2 (Open-Meteo serves only the latest run) and IBTrACS active.
+- ECMWF ensemble cyclone tracks are **not** archived. ECMWF's Google Cloud mirror `gs://ecmwf-open-data` keeps full history (e.g. Montha 27 Oct 2025, Dana 23 Oct 2024), which enables as-issued replays of past storms.
+- Writes `gs://argmax-cyclone-2026-archive/{source}/{YYYY}/{MM}/{DD}/{HHMM}Z/…` plus a per-run manifest.
 
 ### Gemini's roles (it does real work, never the arithmetic)
 
@@ -119,7 +120,7 @@ This uses plain pnpm plus uv workspaces. Nx can wrap it later if it earns its ke
 
 | # | Milestone | Done when |
 |---|---|---|
-| M0 | Feed archiver live | First GDACS/SACHET/ECMWF/WN2 snapshots are in GCS |
+| M0 | Feed archiver live ✅ | Done 26 Sep: 4/4 sources archived; every 6 h |
 | M1 | Geo service v0 | `/rank/fani?region=coast` returns ranked assets with P(outage), deployed on Cloud Run |
 | M2 | Console v0 | Map + timeline + ranked list on Vercel (Predict/Prioritise) |
 | M3 | Agent + Prepare | Advisory drafted in CAP 1.2 (en/or), approve → Firestore audit → Odia audio |
