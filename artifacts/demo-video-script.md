@@ -3,7 +3,7 @@
 **Target length:** 4:50. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
 **Narration:** about 680 words at roughly 140 words a minute.
 **Record at:** https://shadowcast-two.vercel.app, full screen at 1920×1080.
-**Slides used:** from the ShadowCast pitch deck: the cover, slide 4 (the solution) and slide 10 (architecture).
+**Slides used:** from the ShadowCast pitch deck: the cover, slide 4 (the solution, with the live Prioritise screen), slide 8 (validation, with Gemini's satellite reading), slide 10 (architecture) and slide 12 (the ask).
 
 Before recording:
 - Open the site once so the Cloud Run geo service is warm. Open each storm once so Gemini's cached readings load instantly.
@@ -22,10 +22,10 @@ Before recording:
 
 ## 0:20–0:40 · The solution
 
-**Show:** deck slide 1 (cover) for about 3 s, then slide 4 (the solution) for about 12 s, then back to the console.
+**Show:** deck slide 1 (cover) for about 3 s, then slide 4 (the solution) for about 12 s: move the cursor from the Mot shelter card to the Prioritise screenshot beside it, then along the four steps at the bottom. Then back to the console.
 
 **Say:**
-> I'm Sathya, and this is Team Argmax. ShadowCast tells a district officer which hospitals, shelters, substations and roads a cyclone will knock out, and when, up to sixty-eight hours ahead. It learns from real outages seen by satellite, uses Gemini to read, hear and draft, and checks itself after every storm.
+> I'm Sathya, and this is Team Argmax. ShadowCast tells a district officer which hospitals, shelters, substations and roads a cyclone will knock out, and when, up to sixty-eight hours ahead: here, Mot shelter, first of 3,325 sites. It learns from real outages seen by satellite, runs on real forecasts, uses Gemini to read, hear and draft, and checks itself after every storm.
 
 ## 0:40–1:50 · The Brief: official and live, then what breaks
 
@@ -65,16 +65,16 @@ Before recording:
 
 **Show:**
 1. Open **Prove** on Fani: the AUC tiles, then scroll to **Satellite evidence · read by Gemini** (before/after images), **Storm rain vs NASA GPM** and **Storm surge vs IMD**.
-2. Storm select **Hudhud 2014**, then **Amphan 2020**, on Prove.
+2. Cut to deck slide 8 (validation) for about 12 s: point at the Hudhud row, then the Amphan row. Back to the console for the next section.
 
 **Say:**
 > Here's the part most tools skip: was it right? NASA's night-light satellite shows which substations went dark. Above a hundred knots they lost a median seventy-seven percent of their light. Hide parts of the coast and refit, and the model still scores 0.97.
 >
 > Gemini looks at the same before and after images and calls it: Khordha, Puri and Cuttack went dark, which agrees with the forecast. Rain matches NASA's GPM satellite with a rank correlation of 0.72, and the surge lands in the range IMD reported.
 >
-> *(Hudhud)* On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
+> *(slide 8)* Every model, every storm, scored the same way. On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
 >
-> *(Amphan)* On Amphan it fails, and we publish that. That is what Prove is for: telling an officer to recalibrate before trusting the model on a new grid.
+> *(Amphan row)* On Amphan it fails, and we publish that. That is what Prove is for: telling an officer to recalibrate before trusting the model on a new grid.
 
 ## 3:50–4:15 · Real forecasts
 
