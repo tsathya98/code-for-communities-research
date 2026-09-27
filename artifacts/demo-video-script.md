@@ -1,7 +1,7 @@
 # ShadowCast demo video script (Team Argmax)
 
-**Target length:** 4:15. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
-**Narration:** about 600 words at roughly 140 words a minute.
+**Target length:** 4:25. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
+**Narration:** about 630 words at roughly 140 words a minute.
 **Record at:** https://shadowcast-two.vercel.app, full screen at 1920×1080.
 **Slides used:** the ShadowCast pitch deck, for the cover, the solution slide and the closing architecture.
 
@@ -26,26 +26,24 @@ Before recording:
 **Say:**
 > I'm Sathya, and this is Team Argmax. ShadowCast tells a district officer which hospitals, shelters and substations a cyclone will knock out, and when, up to sixty-eight hours ahead. It learns from real outages seen by satellite, drafts the alert with Gemini, and checks itself after every storm.
 
-## 0:40–1:40 · Predict and Prioritise
+## 0:40–1:50 · Brief, Predict and Prioritise
 
 **Show:**
-1. Storm select: **Fani 2019 · Odisha coast**. The replay strip is on **Best track**.
-2. Drag the timeline to about 2 May, 13:00 IST (roughly 20 h before landfall). Press **Play**.
-3. Let the alert cards stack up: gales now, then incoming hurricane-force winds. Pause at **Landfall**.
-4. Click **#1 Mot shelter (Bramhagiri)** in the Prioritise list to show its detail and reasons.
+1. Storm select: **Fani 2019 · Odisha coast**. The replay strip is on **Best track**, and the side panel opens on **Brief**.
+2. Drag the timeline to 2 May, 13:00 IST (T−20 h). Hold on the Brief: the summary, the three tiles, then the first action card (**District administration · in 3 h**).
+3. Press **Play**. Let the alert cards stack up and the action deadlines turn to "Gales … ago". Pause at **Landfall**.
+4. Click the **District administration** action. It opens **Mot shelter (Bramhagiri)** with its reasons.
 
 **Say:**
-> This is the Odisha coast: 3,325 real sites. Hospitals, cyclone shelters, substations, water works. I'm replaying Fani from about twenty hours out.
+> This is the Odisha coast: 3,325 real sites. I'm replaying Fani from twenty hours out, and the console opens on the duty brief.
 >
-> For every site, ShadowCast computes the wind from the storm track: how strong it gets, and exactly when gales arrive.
+> Fani is twenty hours from landfall, and 917 sites are likely to lose power. Every agency gets its action with a deadline: the moment gales reach its first site, because after that, crews and generators can't move safely. District administration has three hours to open and stock 254 shelters. Health has three hours to get back-up generators to 515 sites.
 >
-> *(press Play)* As the storm closes in, alerts fire the way a duty officer needs them. Gales now at these shelters. Hurricane-force winds reaching this hospital in one hour.
+> *(press Play)* As the storm closes in, alerts fire: gales now at these shelters, hurricane-force winds reaching this hospital in one hour. Each dot's colour is its chance of losing power, from a model fitted on where the lights actually went out.
 >
-> Each dot's colour is its chance of losing power. That comes from a model fitted on where the lights actually went out.
->
-> *(click #1)* And every rank comes with reasons. Modelled peak wind, 126 knots. The storm passes nine kilometres away. Gales arrive sixteen hours before landfall. Eight thousand people live nearby.
+> *(click the action)* And every item drills down. Mot shelter: modelled peak wind 126 knots, the storm passing nine kilometres away, gales sixteen hours before landfall, eight thousand people nearby.
 
-## 1:40–2:45 · Prepare
+## 1:50–2:55 · Prepare
 
 **Show:**
 1. With Mot shelter selected, open the **Prepare** tab and click the suggestion **"Why is Mot shelter (Bramhagiri) ranked #1?"**. Let the answer stream.
@@ -65,7 +63,7 @@ Before recording:
 >
 > *(let the audio play)*
 
-## 2:45–3:25 · Prove
+## 2:55–3:35 · Prove
 
 **Show:**
 1. Open the **Prove** tab on Fani: the AUC tile and the night-light loss by wind band chart.
@@ -81,7 +79,7 @@ Before recording:
 >
 > *(Amphan)* On Amphan in Bengal it fails, at 0.44, and we publish that. That's what Prove is for: it tells an officer to recalibrate before trusting the model on a new grid.
 
-## 3:25–3:50 · Real forecasts
+## 3:35–4:00 · Real forecasts
 
 **Show:**
 1. Storm select **Dana 2024**. On the replay strip, click **T−68h**: the ensemble tracks fan out.
@@ -90,7 +88,7 @@ Before recording:
 **Say:**
 > And it works with real forecasts. This is Cyclone Dana with ECMWF's ensemble, exactly as it was issued, sixty-eight hours before landfall. Instead of one line, every site gets the share of forecast tracks that bring it gales. As the issue times advance, you watch the uncertainty tighten.
 
-## 3:50–4:15 · Architecture and close
+## 4:00–4:25 · Architecture and close
 
 **Show:** deck slide 10 (architecture), then slide 12 (the ask), and end on the live URL.
 
@@ -110,6 +108,7 @@ Before recording:
 | 1.2 million evacuated | NBC News, 3 May 2019 |
 | Puri district without power 11 days later | Business Standard (PTI), 14 May 2019 |
 | 3,325 sites; Mot shelter: 126 kt, 9 km, gales +16 h, about 8,219 people | Live geo API, `fani-2019` |
+| 917 sites likely to lose power; district administration 254 sites due in 3 h; health 515 sites due in 3 h | The live Brief at 2 May 13:00 IST, `fani-2019` best track |
 | 77% median light loss above 100 kt; about 0 below 80 kt | `fani-2019` `loss_by_band` |
 | AUC 0.97 in sample and in the spatial holdout; Hudhud 0.79; Amphan 0.44 | [validation-results.md](validation-results.md) |
 | Dana ensemble 68 → 20 h, 36–52 members | `dana-2024` forecasts (ECMWF open data) |
