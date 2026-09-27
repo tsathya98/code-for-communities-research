@@ -37,7 +37,7 @@ Before recording:
 **Say:**
 > This is the Odisha coast: 3,325 real sites. I'm replaying Fani from twenty hours out, and the console opens on the duty brief.
 >
-> Fani is twenty hours from landfall, and 917 sites are likely to lose power. Every agency gets its action with a deadline: the moment gales reach its first site, because after that, crews and generators can't move safely. District administration has three hours to open and stock 254 shelters. Health has three hours to get back-up generators to 515 sites.
+> Fani is twenty hours from landfall, and 917 sites are likely to lose power. Every agency gets its action with a deadline: the moment gales reach its first site, because after that, crews and generators can't move safely. District administration has three hours to open and stock 254 shelters and schools. Health has three hours to get back-up generators to 515 sites.
 >
 > *(press Play)* As the storm closes in, alerts fire: gales now at these shelters, hurricane-force winds reaching this hospital in one hour. Each dot's colour is its chance of losing power, from a model fitted on where the lights actually went out.
 >
