@@ -1,6 +1,6 @@
 # ShadowCast demo video script (Team Argmax)
 
-**Length:** about 3:30 as written. With clicks and Gemini waits a real take runs about 4:10, under the 5:00 limit.
+**Length:** about 3:55 as written. With clicks and Gemini waits a real take runs about 4:35, under the 5:00 limit.
 **Site:** https://shadowcast-two.vercel.app, Chrome full screen, zoom 100%.
 **Slides:** `video/intro-and-endcard.html` (F = full screen, Right = next), and deck slides 10 and 12 from `pitch-deck/ShadowCast-deck.pdf` (open it in Chrome, press F11 for full screen, arrow keys to change page).
 **Narration:** "..." means pause. The fillers are optional.
@@ -63,23 +63,28 @@
 >
 > *(click the draft)* Gemini drafts the alert in English, Hindi and Odia. ... *(approve)* Once an officer approves, it's live on a CAP feed that SACHET can read.
 
-## 2:31 to 2:54 · Prove
+## 2:31 to 3:18 · Prove
 
 **Show:**
-1. **Prove** tab. Point at **AUC 0.97**.
+1. **Prove** tab. Point at **AUC 0.97** and the **Spatial holdout** line, then the **light loss by wind** chart (the 100 to 130 kt bar).
 2. Scroll to **Satellite evidence** and hold on the before and after images (4 s).
+3. Scroll to **Storm surge vs IMD** (2.3 m against 1.5 m).
 
 **Say:**
-> Did it work? NASA's night lights show which substations actually went dark. The outage model we trained on that scores 0.97... and 0.79 on Hudhud, a storm it never saw. *(satellite images)* Gemini reads the same images, and agrees.
+> So how do we know it's right? NASA's night light pictures show which substations actually went dark. Above a hundred knots, they lost a median of 77 percent of their light. The outage model we trained scores 0.97... even when each stretch of coast is held out.
+>
+> *(satellite images)* Gemini reads the same images and finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. *(surge)* And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
+>
+> On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
 
-## 2:54 to 3:05 · Dana forecast
+## 3:18 to 3:29 · Dana forecast
 
 **Show:** Storm menu, **Dana 2024**, then click **T−68h** straight away. Let the forecast tracks sit on the map (4 s).
 
 **Say:**
 > And this is Cyclone Dana, with the forecast exactly as it was issued, 68 hours out.
 
-## 3:05 to 3:34 · Close
+## 3:29 to 3:58 · Close
 
 **Show:** deck page 10 (6 s), then page 12 (5 s). For the last line, switch to the intro tab and press Right once for the end card. Hold 3 s, then stop recording.
 
@@ -98,7 +103,8 @@
 | 1.2 million evacuated | NBC News, 3 May 2019 |
 | Puri without power 11 days later | Business Standard (PTI), 14 May 2019 |
 | 917 sites, 254 in 3 h | Live Brief at 2 May 13:00 IST |
+| Gemini: Khordha, Puri, Cuttack went dark; surge 2.3 m vs IMD 1.5 m | Prove tab |
 | Mot shelter 99%, road closes 04:15 | Mot shelter panel, `fani-2019` assets |
-| AUC 0.97, Hudhud 0.79 | [validation-results.md](validation-results.md) |
+| 77% light loss above 100 kt, AUC 0.97 (and in the spatial holdout), Hudhud 0.79 | [validation-results.md](validation-results.md) |
 | Dana at T−68 h | `dana-2024` forecasts (ECMWF open data) |
 | ₹5,300 a month | [costing.md](costing.md) |
