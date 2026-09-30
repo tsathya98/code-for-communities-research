@@ -1,6 +1,6 @@
 # ShadowCast demo video script (Team Argmax)
 
-**Target length:** 4:56. The rules allow 3 to 5 minutes, and most of the video has to be the working site, not slides.
+**Target length:** 4:57. The rules allow 3 to 5 minutes, and most of the video has to be the working site, not slides.
 **Narration:** about 640 words, roughly 4:33 at 140 words a minute. The rest is silent screen time: the replay playing, the Odia audio and the CAP feed.
 **Record at:** https://shadowcast-two.vercel.app in Chrome, full screen at 1920×1080, browser zoom 100%.
 **Slides used:** from the pitch deck, downloaded as PDF and shown full screen: slide 1 (cover), slide 4 (the solution, with the Prioritise screenshot), slide 8 (validation), slide 10 (architecture) and slide 12 (the ask).
@@ -18,25 +18,25 @@
 
 ---
 
-## 0:00 to 0:21 · Cold open
+## 0:00 to 0:22 · Cold open
 
 **Show:**
 1. One second of black.
 2. Fade in on the console with Fani selected and the timeline dragged to the **Landfall** mark (3 May, 09:00 IST): the storm eye over Puri, alert cards on the map, amber roads and the blue surge band along the coast. Don't touch anything.
 
 **Say:**
-> In May 2019, Cyclone Fani hit Puri. Odisha evacuated 1.2 million people in time. Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. The warnings gave the storm's track; nobody could say which of those sites would go dark.
+> In May 2019, Cyclone Fani hit Puri. Odisha evacuated 1.2 million people in time. Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. The warnings gave the storm's track, but nobody could say which of those sites would go dark.
 
-## 0:21 to 0:38 · The solution
+## 0:22 to 0:40 · The solution
 
 **Show:**
 1. Deck slide 1 (cover) for 3 seconds.
 2. Deck slide 4 for about 15 seconds: point at the Mot shelter card, then at the Prioritise screenshot beside it, then run the cursor along the four steps at the bottom.
 
 **Say:**
-> I'm Sathya, from Team Argmax. ShadowCast tells a district officer which sites and roads a cyclone will knock out, and when, up to sixty-eight hours ahead: here, Mot shelter, first of 3,325 sites.
+> I'm Sathya from Team Argmax. ShadowCast tells a district officer which sites and roads a cyclone will knock out, and when, up to 68 hours ahead. Here, Mot shelter comes first out of 3,325 sites.
 
-## 0:38 to 1:51 · The Brief, twenty hours out
+## 0:40 to 1:51 · The Brief, twenty hours out
 
 **Show:**
 1. Back to the site. The **Storm** menu (top left) shows **Fani 2019 · Odisha coast (Ganjam to Balasore)**, **Best track** is selected, and the side panel is on **Brief**.
@@ -48,17 +48,17 @@
 7. Press **Play replay**. Let the alert cards stack up and the roads turn amber for about 7 seconds, then pause at **Landfall**.
 
 **Say:**
-> I'm replaying Fani from twenty hours before landfall. Gemini has read IMD's bulletin straight from the PDF: landfall near Puri, and a one-and-a-half-metre surge over Ganjam, Khurda, Puri and Jagatsinghpur. The card below is live. It shows the NDMA warnings in force for Odisha today, which right now is a flood on the Mahanadi. *(say what the card shows on the day)*
+> I'm replaying Fani from twenty hours before landfall. Gemini has read IMD's bulletin straight from the PDF. It says landfall near Puri, with a surge of one and a half metres over Ganjam, Khurda, Puri and Jagatsinghpur. The card below is live, and today it shows a flood warning on the Mahanadi. *(say what the card shows on the day)*
 >
-> Below that is what ShadowCast adds. 917 sites are likely to lose power. Each agency gets an action due before gales reach its first site, since crews can't work safely after that. District administration has three hours for 254 sites. About 3,900 kilometres of arterial road are likely to be cut, and public works has fourteen hours to get crews onto them.
+> Below that is what ShadowCast adds. 917 sites are likely to lose power. Each agency gets an action that's due before gales reach its first site. District administration has three hours for 254 sites. About 3,900 kilometres of arterial road are likely to be cut, and public works has fourteen hours to get crews onto them.
 >
 > The parametric cover triggers in Puri four hours before landfall, and the satellites later showed that the districts where it triggered did lose power.
 >
-> *(Surge, then Rain)* The Surge and Rain layers map the same model's surge and storm rain.
+> *(Surge, then Rain)* The Surge and Rain layers show the same model's surge along the coast and the storm rain.
 >
 > *(press Play and let it run for about 7 seconds without narration)*
 
-## 1:51 to 3:03 · Prepare: asking Gemini, then issuing the alert
+## 1:51 to 3:01 · Prepare: asking Gemini, then issuing the alert
 
 **Show:**
 1. Go back to the Brief and click the **District administration** action. The side panel switches to **Prioritise** and opens **Mot shelter (Bramhagiri)**. Point at **Peak wind** (126 kt), **Gales arrive** (2 May 16:30 IST), **Storm rain** (175 mm, with "NASA GPM measured 119 mm" under it) and **Access road** (3 May 04:15 IST, NH316).
@@ -71,15 +71,15 @@
 8. Click **CAP feed** in the card's footer. The feed opens in a new tab with the new alert at the top. Hold for 3 seconds, then close the tab.
 
 **Say:**
-> Mot shelter is first of 3,325 sites. Its panel shows the peak wind, when gales arrive, rain against NASA's measurement, and its access road, NH316, which closes at a quarter past four on the morning of landfall.
+> Mot shelter is first of 3,325 sites. Its access road, NH316, closes at a quarter past four on the morning of landfall.
 >
-> This is Prepare, with Gemini 3.8 Flash on Vertex AI. I can ask it out loud, in Hindi. It hears the audio itself and answers in Hindi, with numbers from our geo service: here, 126-knot winds and gales sixteen hours before landfall. *(if the answer quotes other figures, say those)*
+> This is Prepare, with Gemini 3.8 Flash on Vertex AI. I can just ask it out loud in Hindi. It hears the audio itself and answers in Hindi, using numbers from our geo service. Here that's winds of 126 knots, with gales sixteen hours before landfall. *(if the answer quotes other figures, say those)*
 >
-> *(click the draft)* It checks IMD's bulletin first, then drafts a CAP alert, the format India's SACHET system uses, in English, Hindi and Odia.
+> *(click the draft)* It checks IMD's bulletin first. Then it drafts a CAP alert, which is the format India's SACHET system uses, in English, Hindi and Odia.
 >
-> Nothing goes out until an officer approves it. The approval is signed on the server and logged in Firestore. *(approve)* Gemini's text-to-speech reads it in Odia, for radio and phone. *(CAP feed)* Approving also dispatches it: the alert is already on a standard CAP feed that SACHET can pick up.
+> Nothing goes out until an officer approves it. The approval is signed on the server and logged in Firestore. *(approve)* Gemini then reads it aloud in Odia, for radio and phone. *(CAP feed)* And approving also sends it out. The alert is already on a standard CAP feed that SACHET can pick up.
 
-## 3:03 to 3:53 · Prove: scoring the model against satellites
+## 3:01 to 3:52 · Prove: scoring the model against satellites
 
 **Show:**
 1. Close the tab so you're back on the console, and open the **Prove** tab (still Fani). Hold on **ROC AUC 0.97** and the **Spatial holdout** line, then on the **Median light loss by modelled wind** chart and its 100 to 130 kt bar.
@@ -88,13 +88,13 @@
 4. Cut to deck slide 8 for about 8 seconds: point at the Hudhud row, then the Amphan row.
 
 **Say:**
-> On the Prove tab, NASA's night-light satellite shows which substations went dark, and above a hundred knots they lost a median seventy-seven percent of their light. The model scores 0.97, and still 0.97 when each stretch of coast is held out.
+> On the Prove tab, NASA's satellite pictures of night lights show which substations went dark. Above a hundred knots, they lost a median of 77 percent of their light. The model scores 0.97, even when each stretch of coast is held out.
 >
-> Gemini reads the same images and finds Khordha, Puri and Cuttack dark, which agrees with the forecast. Rain matches NASA's GPM satellite with a rank correlation of 0.72, and the surge model gives 2.3 metres on the Puri coast against IMD's 1.5.
+> Gemini reads the same images and finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. Rain matches NASA's GPM satellite with a rank correlation of 0.72. And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
 >
 > *(slide 8)* On Hudhud, a storm in Andhra the model never saw, it scores 0.79. *(Amphan row)* On Amphan it fails, and we publish that, so an officer knows to recalibrate before trusting it on a new grid.
 
-## 3:53 to 4:24 · Real forecasts, as issued
+## 3:52 to 4:25 · Real forecasts, as issued
 
 **Show:**
 1. In the **Storm** menu choose **Dana 2024 · Odisha coast**, and click **T−68h** straight away. (The best-track view's top bar shows a backtest AUC of 0.32, which means nothing with only five outages, so don't linger on it.)
@@ -102,9 +102,9 @@
 3. Scroll to **Anticipatory finance**: every district at 0% trigger.
 
 **Say:**
-> ShadowCast replays real storms using the forecasts exactly as they were issued, so you see what an officer would have known at each moment. This is Cyclone Dana with ECMWF's ensemble sixty-eight hours out: 685 sites likely to get gales. No forecast member brings a district to the cover's 64-knot trigger, so the payout odds stay at zero. The official warnings feed is live, and a new storm is one build away.
+> ShadowCast replays real storms using the forecasts exactly as they were issued, so you see what an officer would have known at each moment. This is Cyclone Dana with ECMWF's ensemble 68 hours out, and 685 sites are likely to get gales. No forecast member brings any district up to the cover's trigger of 64 knots, so the payout odds stay at zero. The official warnings feed is live, and a new storm is one build away.
 
-## 4:24 to 4:56 · Architecture and close
+## 4:25 to 4:57 · Architecture and close
 
 **Show:**
 1. On the site, open the **Storm** menu for about 3 seconds: Fani and Dana on the Odisha coast, Hudhud on the north Andhra coast, Amphan on the West Bengal coast.
@@ -115,7 +115,7 @@
 >
 > Our ask is one cyclone season running alongside OSDMA.
 >
-> ShadowCast: know what the storm will break, before it breaks.
+> ShadowCast. Know what the storm will break, before it breaks.
 
 ---
 
