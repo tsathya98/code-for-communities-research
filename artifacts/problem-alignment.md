@@ -29,7 +29,7 @@
 | Critical infrastructure: power grids | Strong | Strong | Substations and power plants, calibrated outage model | Per-utility calibration |
 | Critical infrastructure: medical and shelters | Strong | Strong | Hospitals, health centres, clinics, cyclone shelters | — |
 | Critical infrastructure: arterial roads | Missing | Good | OSM motorway, trunk and primary: cut (surge or ≥ 90 kt, IMD's extremely-severe class), at risk (≥ 64 kt or extreme rain on low ground), closing time; Fani 3,896 of 9,761 km cut | Thresholds follow IMD's damage classes; not checked against recorded road closures |
-| Advisory dispatch to authorities | Good | Good | CAP 1.2 in three languages, officer approval signed on the server, Firestore audit log, TTS audio, IMD bulletin checked first | Nothing is sent, by design (exercise mode) |
+| Advisory dispatch to authorities | Good | Strong | CAP 1.2 in three languages; approving publishes it on a public CAP Atom feed (`/api/cap`), the form aggregators like SACHET poll; approval signed on the server, Firestore audit log, TTS audio, IMD bulletin checked first | Messages are marked Exercise; no aggregator subscribes to our feed yet |
 
 ## Wow factor: honest read
 

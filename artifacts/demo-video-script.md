@@ -53,13 +53,14 @@ Before recording:
 2. Tap the **microphone** and ask aloud, in Hindi or Odia: *"Mot shelter ko sabse pehle kyun rakha gaya hai?"* (why is Mot shelter first?). Tap again to send. Let the answer stream, starting with "Heard: …".
 3. Click **"Draft an advisory for the five highest-priority assets in English, Hindi and Odia"**.
 4. Flip the language tabs, click **Approve and issue**, then **Listen in Odia** for about 4 s.
+5. Click **CAP feed** on the card: the new alert is at the top of the feed. Hold for about 3 s.
 
 **Say:**
 > Now, Prepare. This is Gemini 3.8 Flash on Vertex AI, and I can just ask it out loud, in Hindi. It hears the question directly and answers from live calls to our geo service: 126-knot winds, the storm passing nine kilometres away, gales sixteen hours before landfall.
 >
 > *(click draft)* It checks IMD's bulletin first, then drafts a Common Alerting Protocol message, the format India's SACHET system uses, in English, Hindi and Odia.
 >
-> ShadowCast drafts and formats the alert for SACHET; by design, an officer presses send. I approve or reject, the approval is signed on the server, and it's logged in Firestore. *(approve)* Gemini's text-to-speech then reads it in Odia, for radio and phone.
+> Nothing goes out until an officer approves it. I approve or reject, the approval is signed on the server, and it's logged in Firestore. *(approve)* Gemini's text-to-speech reads it in Odia, for radio and phone. *(CAP feed)* And approving is dispatching: the alert is already on a standard CAP feed, the kind SACHET picks up.
 
 ## 2:55–3:50 · Prove: the satellites check everything
 
@@ -104,6 +105,7 @@ Before recording:
 | Puri district without power 11 days later | Business Standard (PTI), 14 May 2019 |
 | IMD: landfall near Puri; 1.5 m surge over Ganjam, Khurda, Puri, Jagatsinghpur | IMD National Bulletin No. 44, 05:30 IST 2 May 2019, as read by Gemini (`/api/bulletins/fani-2019`) |
 | Live NDMA warnings for Odisha | `/live`, feed archiver's newest run |
+| Approved alert on the CAP feed | `/api/cap` (Atom), `/api/cap/<id>` (CAP 1.2) |
 | 3,325 sites; Mot shelter: 126 kt, 9 km, gales +16 h | Live geo API, `fani-2019` |
 | 917 sites likely to lose power; district administration 254 sites due in 3 h | The live Brief at 2 May 13:00 IST |
 | About 3,900 of 9,800 km of arterial road cut; NH316 (Bhubaneswar–Puri) unsafe from 3 May 04:45 IST | `fani-2019` roads (`/scenarios/fani-2019/roads`), IMD damage classes (cut at 90 kt) |
