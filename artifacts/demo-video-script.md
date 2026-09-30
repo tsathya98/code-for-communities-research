@@ -1,7 +1,7 @@
 # ShadowCast demo video script (Team Argmax)
 
 **Target length:** 4:50. The rules allow 3–5 minutes, and the video must show the working deployment, not only slides.
-**Narration:** about 680 words at roughly 140 words a minute.
+**Narration:** about 690 words at roughly 140 words a minute (about 4:55 of speech, so keep pauses short and cut Gemini waits in editing).
 **Record at:** https://shadowcast-two.vercel.app, full screen at 1920×1080.
 **Slides used:** from the ShadowCast pitch deck: the cover, slide 4 (the solution, with the live Prioritise screen), slide 8 (validation, with Gemini's satellite reading), slide 10 (architecture) and slide 12 (the ask).
 
@@ -77,19 +77,19 @@ Before recording:
 >
 > *(Amphan row)* On Amphan it fails, and we publish that. That is what Prove is for: telling an officer to recalibrate before trusting the model on a new grid.
 
-## 3:50–4:15 · Real forecasts
+## 3:50–4:20 · Real forecasts, as issued
 
 **Show:** storm select **Dana 2024**, click **T−68h**: the ensemble tracks fan out; step to **T−20h**. Show the parametric card's trigger odds.
 
 **Say:**
-> And it works on real forecasts. This is Cyclone Dana with ECMWF's ensemble exactly as issued, sixty-eight hours out. Every site gets the share of forecast tracks that bring it gales, and every district its odds of a payout, days before landfall.
+> ShadowCast replays real storms using the forecasts exactly as they were issued, so you see what an officer would have known at each moment. This is Cyclone Dana with ECMWF's ensemble sixty-eight hours out. Every site gets the share of forecast tracks that bring it gales, and every district its odds of a payout, days before landfall. The official warnings feed is live, and a new storm is one build away.
 
-## 4:15–4:50 · Architecture and close
+## 4:20–4:50 · Architecture and close
 
 **Show:** deck slide 10 (architecture), then slide 12 (the ask), and end on the live URL.
 
 **Say:**
-> It's all live. The console runs on Vercel. Gemini, its voice and the audit log run on Google Cloud; the geo service runs on Cloud Run with Earth Engine; every byte of data sits in Cloud Storage and Firestore, with no stored keys. Three coasts and three languages are already built.
+> It all runs today on Vercel and Google Cloud: Gemini on Vertex AI, the geo service on Cloud Run with Earth Engine, and every byte of data in Cloud Storage and Firestore, with no stored keys. Three coasts and three languages are already built.
 >
 > Our ask: one cyclone season running alongside OSDMA.
 >
