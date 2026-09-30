@@ -38,7 +38,7 @@
 ## 0:40 to 1:51 · The Brief, twenty hours out
 
 **Show:**
-1. Back to the site. The **Storm** menu (top left) shows **Fani 2019 · Odisha coast (Ganjam to Balasore)**, **Best track** is selected, and the side panel is on **Brief**.
+1. Back to the site. The **Storm** menu (top left) shows **Fani 2019 · Odisha coast (Ganjam to Balasore)**, **Best track** is selected, and the side panel is on **Brief**. The line under the storm menu reads **No cyclone active now · past storms replayed as forecast at the time**.
 2. Drag the timeline to **2 May, 13:00 IST**. Above the date it says **Replay · Fani 2019**, and under it "2 MAY 07:30 UTC · T−20 H".
 3. Hold on the **IMD bulletin · read by Gemini** card for about 5 seconds, then on **Live now · real feeds**.
 4. Scroll down past the tiles (**At risk 917**, **Next gales 3 h**) to **Recommended actions**. Scroll past the **Surge flood 0** tile without stopping. Pause on **District administration · in 3 h**, then **Public works · in 14 h**.
@@ -86,7 +86,7 @@
 4. Cut to deck slide 8 for about 8 seconds: point at the Hudhud row, then the Amphan row.
 
 **Say:**
-> On the Prove tab, NASA's satellite pictures of night lights show which substations went dark. Above a hundred knots, they lost a median of 77 percent of their light. The model scores 0.97, even when each stretch of coast is held out.
+> On the Prove tab, NASA's satellite pictures of night lights show which substations went dark. Above a hundred knots, they lost a median of 77 percent of their light. The outage model we trained scores 0.97, even when each stretch of coast is held out.
 >
 > Gemini reads the same images and finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. Rain matches NASA's GPM satellite with a rank correlation of 0.72. And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
 >

@@ -1,6 +1,6 @@
 <section id="validation" data-transition="fade" style="background:#0e1012; color:#f3efe8; font-family:'Geist', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
 <div style="display:flex; flex-direction:column; gap:16px">
-<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#f28a2e">Validation</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#f28a2e">Validation · outage model trained on Fani, tested on unseen storms</p>
 <h2 style="font-size:72px; font-weight:600; line-height:1.1; letter-spacing:-1px">Every model scored against what really happened</h2>
 </div>
 <div style="display:flex; flex-direction:row; gap:48px">
@@ -36,5 +36,5 @@
 <p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">SHADOWCAST · TEAM ARGMAX · FULL RECORD IN THE REPO</p>
 <p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">08</p>
 </div>
-<aside>Three models, each scored against independent truth, and on the right the live Prove tab, where Gemini reads the same before and after night-light images and agrees that Khordha, Puri and Cuttack went dark. Outages: the two-parameter model fitted on Fani scores 0.97, and 0.97 again when each stretch of coast is hidden in turn; on Hudhud, a storm it never saw, 0.79. Surge: the physics model lands in the right range for all four storms against IMD's reports, running high on narrow shelves, which is typical of this kind of model. Rain: rank correlation with NASA's GPM satellite is 0.72 to 0.96, except Amphan. Amphan fails on both outages and rain, and we publish that. A physics fix we tried made Fani worse, so we rejected it by a rule set in advance.</aside>
+<aside>Three models, each scored against independent truth, and on the right the live Prove tab, where Gemini reads the same before and after night-light images and agrees that Khordha, Puri and Cuttack went dark. Outages: the outage model is a logistic regression we trained on Fani, on 200 lit substations whose outages the satellite saw. It scores 0.97, and 0.97 again when each stretch of coast is hidden in turn; on Hudhud, a storm it never saw, 0.79. Surge: the physics model lands in the right range for all four storms against IMD's reports, running high on narrow shelves, which is typical of this kind of model. Rain: rank correlation with NASA's GPM satellite is 0.72 to 0.96, except Amphan. Amphan fails on both outages and rain, and we publish that. A physics fix we tried made Fani worse, so we rejected it by a rule set in advance.</aside>
 </section>
