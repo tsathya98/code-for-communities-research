@@ -63,7 +63,7 @@
 1. Go back to the Brief and click the **District administration** action. The side panel switches to **Prioritise** and opens **Mot shelter (Bramhagiri)**. Point at **Peak wind** (126 kt), **Gales arrive** (2 May 16:30 IST), **Storm rain** (175 mm, with "NASA GPM measured 119 mm" under it) and **Access road** (3 May 04:15 IST, NH316).
 2. Click **← Priorities**: the ranked list of 3.3K assets with its category filters (Hospital, Cyclone shelter, Substation, …). Hold for 2 seconds.
 3. Open the **Prepare** tab.
-4. With headphones on, click the **phone** button (Start a live voice call). When the card reads **Live call · speak any time**, ask in Hindi *"Mot shelter ko sabse pehle kyun rakha gaya hai?"* (why is Mot shelter first?). The analyst answers aloud in Hindi straight away, captioned under **You** and **Analyst**. Let it talk for about 8 seconds, then click **End call**.
+4. With headphones on, click **Live call** above the message box. When the card reads **Live call · speak any time**, ask in Hindi *"Mot shelter ko sabse pehle kyun rakha gaya hai?"* (why is Mot shelter first?). The analyst answers aloud in Hindi straight away, captioned under **You** and **Analyst**. Let it talk for about 8 seconds, then click **End call**.
 5. Click the suggestion **"Draft an advisory for the five highest-priority assets in English, Hindi and Odia"**. Cut the wait until the advisory card appears.
 6. Click the English, Hindi and Odia tabs on the card, then **Approve and issue**.
 7. Click **CAP feed** in the card's footer. The feed opens in a new tab with the new alert at the top. Hold for 3 seconds, then close the tab.
