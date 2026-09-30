@@ -1,8 +1,9 @@
 # ShadowCast demo video script (Team Argmax)
 
-**Target length:** 4:56. The rules allow 3 to 5 minutes, and most of the video has to be the working site, not slides.
-**Narration:** about 600 words, roughly 4:18 at 140 words a minute. The rest is screen time without narration: the stat cards, the replay playing, the live call, the CAP feed and the end card.
+**Target length:** 4:53. The rules allow 3 to 5 minutes, and most of the video has to be the working site, not slides.
+**Narration:** about 600 words, roughly 4:17 at 140 words a minute. The rest is screen time without narration: the stat cards, the replay playing, the live call, the CAP feed and the end card.
 **Record at:** https://shadowcast-two.vercel.app in Chrome, full screen at 1920×1080, browser zoom 100%.
+**Reading the narration:** "..." is a real pause, usually while something loads or you move the cursor. The "um" and "so" are there to keep it sounding like you talking. Drop any that don't come naturally, and don't add more.
 **Slides used:** the intro and end card from `artifacts/video/intro-and-endcard.html` (open it in Chrome, press F for full screen, Right arrow or Space to advance), and from the pitch deck, downloaded as PDF and shown full screen: slide 4 (the solution, with the Prioritise screenshot), slide 8 (validation), slide 10 (architecture) and slide 12 (the ask).
 
 ## Before recording
@@ -30,17 +31,17 @@
 7. "Introducing ShadowCast", about 2 seconds, then switch to the deck.
 
 **Say:**
-> In May 2019, Cyclone Fani hit Puri. Odisha evacuated 1.2 million people in time. Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. The warnings gave the storm's track, but nobody could say which of those sites would go dark.
+> In May 2019, Cyclone Fani hit Puri. ... Odisha evacuated 1.2 million people in time. ... Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. ... The warnings gave the storm's track. But nobody could say which of those sites would go dark.
 
-## 0:26 to 0:41 · The solution
+## 0:26 to 0:43 · The solution
 
 **Show:**
 1. Deck slide 4 for about 15 seconds: point at the Mot shelter card, then at the Prioritise screenshot beside it, then run the cursor along the four steps at the bottom.
 
 **Say:**
-> I'm Sathya from Team Argmax. ShadowCast tells a district officer which sites and roads a cyclone will knock out, and when, up to 68 hours ahead. Here, Mot shelter comes first out of 3,325 sites.
+> Hi, I'm Sathya from Team Argmax. So, ShadowCast tells a district officer which sites and roads a cyclone is going to knock out, and when, up to 68 hours ahead. Here, um, Mot shelter comes first out of 3,325 sites.
 
-## 0:41 to 1:55 · The Brief, twenty hours out
+## 0:43 to 2:01 · The Brief, twenty hours out
 
 **Show:**
 1. Back to the site. The **Storm** menu (top left) shows **Fani 2019 · Odisha coast (Ganjam to Balasore)**, **Best track** is selected, and the side panel is on **Brief**. The line under the storm menu reads **No cyclone active now · past storms replayed as forecast at the time**.
@@ -48,18 +49,18 @@
 3. Hold on the **IMD bulletin · read by Gemini** card for about 5 seconds, then on **Live now · real feeds**.
 4. Scroll down past the tiles (**At risk 917**, **Next gales 3 h**) to **Recommended actions**. Scroll past the **Surge flood 0** tile without stopping. Pause on **District administration · in 3 h**, then **Public works · in 14 h**.
 5. Click **What-if simulation** (under the readouts, top left). Drag **Storm intensity** to **+10%** and **High tide** to **+1.00 m**. Watch the **≥50% outage** readout and the ranked list change. Then click **Surge** on the map legend (bottom left) for about 3 seconds to show the coast flooding. Click **Reset**, then **Outage**.
-6. Press **Play replay**. Let the alert cards stack up and the roads turn amber for about 7 seconds, then pause at **Landfall**.
+6. Press **Play replay**. Let the alert cards stack up and the roads turn amber for about 5 seconds, then pause at **Landfall**.
 
 **Say:**
-> I'm replaying Fani from twenty hours before landfall. Gemini has read IMD's bulletin straight from the PDF. It says landfall near Puri, with a surge of one and a half metres over Ganjam, Khurda, Puri and Jagatsinghpur. The card below is live, and today it shows a flood warning on the Mahanadi. *(say what the card shows on the day)*
+> Okay, so I'm replaying Fani from twenty hours before landfall. Up here, Gemini has read IMD's bulletin straight from the PDF. It says landfall near Puri, and a surge of one and a half metres over Ganjam, Khurda, Puri and Jagatsinghpur. This card below is live... today it's showing a flood warning on the Mahanadi. *(say what the card shows on the day)*
 >
-> Below that is what ShadowCast adds. 917 sites are likely to lose power. Each agency gets an action that's due before gales reach its first site. District administration has three hours for 254 sites. About 3,900 kilometres of arterial road are likely to be cut, and public works has fourteen hours to get crews onto them.
+> And below that is where ShadowCast comes in. 917 sites are likely to lose power. Each agency gets an action, due before gales reach its first site. So district administration has three hours, for 254 sites. And about 3,900 kilometres of arterial road are likely to be cut... public works has fourteen hours to get crews onto them.
 >
-> *(open What-if)* And I can stress test the storm. Make Fani a tenth stronger and land it on a high tide. More sites go dark, the coast floods, and the list reorders at once, all from the model we trained.
+> *(open What-if)* Now, I can also stress test this. Say Fani comes in a tenth stronger, um, and lands on a high tide. ... You can see more sites go dark, the coast floods, and the list reorders straight away. That's our trained model running again on the new winds.
 >
-> *(press Play and let it run for about 7 seconds without narration)*
+> *(press Play and let it run for about 5 seconds without narration)*
 
-## 1:55 to 3:04 · Prepare: asking Gemini, then issuing the alert
+## 2:01 to 3:10 · Prepare: asking Gemini, then issuing the alert
 
 **Show:**
 1. Go back to the Brief and click the **District administration** action. The side panel switches to **Prioritise** and opens **Mot shelter (Bramhagiri)**. Point at **Peak wind** (126 kt), **Gales arrive** (2 May 16:30 IST), **Storm rain** (175 mm, with "NASA GPM measured 119 mm" under it) and **Access road** (3 May 04:15 IST, NH316).
@@ -71,39 +72,39 @@
 7. Click **CAP feed** in the card's footer. The feed opens in a new tab with the new alert at the top. Hold for 3 seconds, then close the tab.
 
 **Say:**
-> This is Mot shelter's own panel. Its access road, NH316, closes at a quarter past four on the morning of landfall.
+> This is Mot shelter's own panel. Its access road, NH316, closes at a quarter past four... on the morning of landfall.
 >
-> This is Prepare. With Gemini Live on Vertex AI, I can simply call the analyst and ask in Hindi. *(ask, then let it answer for about 8 seconds)* It answers aloud using numbers from our geo service, and I can cut in at any time.
+> Okay, now Prepare. With Gemini Live on Vertex AI, I can just call the analyst... and ask in Hindi. *(ask, then let it answer for about 8 seconds)* ... So it answers out loud, using numbers from our geo service, and I can interrupt it whenever I want.
 >
-> *(click the draft)* For the written alert, Gemini 3.8 Flash checks IMD's bulletin first. Then it drafts a CAP alert, which is the format India's SACHET system uses, in English, Hindi and Odia.
+> *(click the draft)* For the written alert, Gemini 3.8 Flash checks IMD's bulletin first. ... Then it drafts a CAP alert, that's the format India's SACHET system uses, in English, Hindi and Odia.
 >
-> Nothing goes out until an officer approves it. The approval is signed on the server and logged in Firestore. *(approve, then CAP feed)* And approving also sends it out. The alert is already on a standard CAP feed that SACHET can pick up.
+> Nothing goes out until an officer approves it. The approval is signed on the server and logged in Firestore. *(approve, then CAP feed)* And once I approve, it's sent. It's already on a standard CAP feed that SACHET can pick up.
 
-## 3:04 to 3:57 · Prove: scoring the model against satellites
+## 3:10 to 4:01 · Prove: scoring the model against satellites
 
 **Show:**
 1. Close the tab so you're back on the console, and open the **Prove** tab (still Fani). Hold on **ROC AUC 0.97** and the **Spatial holdout** line, then on the **Median light loss by modelled wind** chart and its 100 to 130 kt bar.
 2. Scroll to **Satellite evidence · read by Gemini**: the before and after images and the **Agrees with ShadowCast** tag.
-3. Scroll to **Storm rain vs NASA GPM** (0.72), then **Storm surge vs IMD** (2.3 m against 1.5 m).
+3. Scroll past **Storm rain vs NASA GPM** to **Storm surge vs IMD** (2.3 m against 1.5 m).
 4. Cut to deck slide 8 for about 8 seconds: point at the Hudhud row, then the Amphan row.
 
 **Say:**
-> On the Prove tab, NASA's satellite pictures of night lights show which substations went dark. Above a hundred knots, they lost a median of 77 percent of their light. The outage model we trained scores 0.97, even when each stretch of coast is held out.
+> So how do we know it's right? On the Prove tab, NASA's night light pictures show which substations actually went dark. Above a hundred knots, they lost a median of 77 percent of their light. The outage model we trained scores 0.97... even when each stretch of coast is held out.
 >
-> Gemini reads the same images and finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. Rain matches NASA's GPM satellite with a rank correlation of 0.72. And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
+> Gemini reads the same images and, um, finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
 >
-> *(slide 8)* On Hudhud, a storm in Andhra the model never saw, it scores 0.79. *(Amphan row)* On Amphan it fails, and we publish that, so an officer knows to recalibrate before trusting it on a new grid.
+> *(slide 8)* On Hudhud, a storm in Andhra the model never saw, it scores 0.79. *(Amphan row)* On Amphan it fails. We publish that too, so an officer knows to recalibrate before trusting it on a new grid.
 
-## 3:57 to 4:21 · Real forecasts, as issued
+## 4:01 to 4:19 · Real forecasts, as issued
 
 **Show:**
 1. In the **Storm** menu choose **Dana 2024 · Odisha coast**, and click **T−68h** straight away. (The best-track view's top bar shows a backtest AUC of 0.32, which means nothing with only five outages, so don't linger on it.)
 2. Drag the timeline back to **22 Oct, 06:00 UTC**, so the screen shows what was known before any gales. The top bar reads **Members 36**, **Likely gales 685**. Let the member tracks show on the map for a few seconds.
 
 **Say:**
-> ShadowCast replays real storms using the forecasts exactly as they were issued, so you see what an officer would have known at each moment. This is Cyclone Dana with ECMWF's ensemble 68 hours out, and 685 sites are likely to get gales. The official warnings feed is live, and a new storm is one build away.
+> And it replays real storms with the forecasts exactly as they were issued, so you see what an officer would've known at each point. This is Cyclone Dana, with ECMWF's ensemble 68 hours out... 685 sites are likely to get gales.
 
-## 4:21 to 4:56 · Architecture and close
+## 4:19 to 4:53 · Architecture and close
 
 **Show:**
 1. On the site, open the **Storm** menu for about 3 seconds: Fani and Dana on the Odisha coast, Hudhud on the north Andhra coast, Amphan on the West Bengal coast.
@@ -111,7 +112,7 @@
 3. End on the end card (slide 8 of the intro slides) for about 3 seconds after the last line.
 
 **Say:**
-> Three coasts are already built, with alerts in Odia, Telugu and Bengali. It all runs on Vercel and Google Cloud, with Gemini on Vertex AI, the geo service on Cloud Run and no stored keys. One Odisha cyclone season for thirty officers costs about 5,300 rupees a month.
+> We've already built three coasts, with alerts in Odia, Telugu and Bengali. It all runs on Vercel and Google Cloud... Gemini on Vertex AI, the geo service on Cloud Run, and no stored keys. One Odisha cyclone season for thirty officers costs about 5,300 rupees a month.
 >
 > Our ask is one cyclone season running alongside OSDMA.
 >
