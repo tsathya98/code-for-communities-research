@@ -2,7 +2,7 @@
 
 **Length:** about 4:20 (limit 5:00), so you have 40 seconds spare.
 **Site:** https://shadowcast-two.vercel.app, Chrome full screen, zoom 100%.
-**Slides:** `video/intro-and-endcard.html` (F = full screen, Right = next), and deck slides 4, 8, 10 and 12 as PDF.
+**Slides:** `video/intro-and-endcard.html` (F = full screen, Right = next), and deck slides 4, 8, 10 and 12 from `pitch-deck/ShadowCast-deck.pdf` (open it in Chrome, press Ctrl+ for full screen page view).
 **Narration:** "..." means pause. The fillers are optional.
 
 ## Before recording
