@@ -27,26 +27,28 @@
 **Say:**
 > Hi, I'm Sathya from Team Argmax. So, ShadowCast tells a district officer which sites and roads a cyclone is going to knock out, and when, up to 68 hours ahead.
 
-## 0:39 to 1:49 · The Brief
+## 0:39 to 1:55 · The Brief
 
 **Show:**
-1. Site: Fani 2019, **Best track**, **Brief** tab.
-2. Drag the timeline to **2 May, 13:00 IST**.
-3. Hold on the **IMD bulletin** card (5 s).
-4. Scroll to **Recommended actions**: District administration (3 h), Public works (14 h).
+1. Site: Fani 2019, **Best track**, **Brief** tab. Drag the timeline to **2 May, 13:00 IST**.
+2. Scroll the side panel to the **top**. Point at the summary: 917 sites, about 3,896 km of arterial road.
+3. Hold on the **IMD bulletin** card just below it (5 s).
+4. Scroll down to **Recommended actions**. Point at **District administration** (in 3 h, 254 sites). Keep scrolling to **Public works** (in 14 h).
 5. **What-if simulation**: Intensity **+10%**, High tide **+1.00 m**. Click **Surge** (3 s), then **Reset** and **Outage**.
 6. **Play replay** for 5 s, then pause.
 
 **Say:**
-> Okay, so I'm replaying Fani from twenty hours before landfall. Up here, Gemini has read IMD's bulletin straight from the PDF. It says landfall near Puri, and a surge of one and a half metres over Ganjam, Khurda, Puri and Jagatsinghpur.
+> Okay, so I'm replaying Fani from twenty hours before landfall. Right at the top, ShadowCast's brief says 917 sites are likely to lose power, and about 3,900 kilometres of arterial road are likely to be cut.
 >
-> And below that is where ShadowCast comes in. 917 sites are likely to lose power. Each agency gets an action, due before gales reach its first site. So district administration has three hours, for 254 sites. And about 3,900 kilometres of arterial road are likely to be cut... public works has fourteen hours to get crews onto them.
+> Just below that, Gemini has read IMD's bulletin straight from the PDF... landfall near Puri, and a surge of one and a half metres over Ganjam, Khurda, Puri and Jagatsinghpur.
+>
+> And if I scroll down, each agency gets an action, due before gales reach its first site. District administration has three hours to get backup power ready at 254 sites, starting with Mot shelter. ... And further down, public works has fourteen hours to get crews onto those roads.
 >
 > *(open What-if)* Now, I can also stress test this. Say Fani comes in a tenth stronger, um, and lands on a high tide. ... You can see more sites go dark, the coast floods, and the list reorders straight away. That's our trained model running again on the new winds.
 >
 > *(Play, 5 s, no talking)*
 
-## 1:49 to 2:56 · Prepare
+## 1:55 to 3:02 · Prepare
 
 **Show:**
 1. Click the **District administration** action. It opens Mot shelter. Point at **Access road** (NH316, 04:15).
@@ -64,7 +66,7 @@
 >
 > Nothing goes out until an officer approves it. The approval is signed on the server and logged in Firestore. *(approve, then CAP feed)* And once I approve, it's sent. It's already on a standard CAP feed that SACHET can pick up.
 
-## 2:56 to 3:38 · Prove
+## 3:02 to 3:44 · Prove
 
 **Show:**
 1. **Prove** tab: **AUC 0.97**, then the light-loss chart.
@@ -77,14 +79,14 @@
 >
 > On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
 
-## 3:38 to 3:48 · Dana forecast
+## 3:44 to 3:54 · Dana forecast
 
 **Show:** Storm menu, **Dana 2024**, then click **T−68h** straight away. Drag the timeline back to **22 Oct, 06:00 UTC**.
 
 **Say:**
 > And this is Cyclone Dana, replayed with ECMWF's forecast exactly as it was issued, 68 hours out... 685 sites are likely to get gales.
 
-## 3:48 to 4:20 · Close
+## 3:54 to 4:26 · Close
 
 **Show:** open the Storm menu (3 s), then deck slide 10 (8 s), then deck slide 12 (6 s). For the last line, switch to the intro tab and press Right once to bring up the end card (or open `intro-and-endcard.html#8`). Say the last line over it, hold 3 s, then stop recording.
 
