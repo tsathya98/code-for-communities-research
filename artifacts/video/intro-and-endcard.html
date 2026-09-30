@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShadowCast Intro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0e1012; --fg:#f3efe8; --acc:#f28a2e; --mut:#a0aaba; --ease:cubic-bezier(.16,.84,.24,1); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; overflow:hidden; background:#000; }
+  body { color:var(--fg); font-family:'Geist', sans-serif; -webkit-font-smoothing:antialiased; user-select:none; }
+  body.idle { cursor:none; }
+  #stage { position:absolute; left:50%; top:50%; width:1920px; height:1080px; overflow:hidden; background:var(--bg);
+    transform-origin:center; transform:translate(-50%,-50%) scale(var(--s,1)); }
+  #stage::after { content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(ellipse 70% 60% at 50% 45%, rgba(242,138,46,0.035), transparent 70%); }
+
+  .beat { position:absolute; inset:0; padding:0 128px; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center; opacity:0; transition:opacity .4s ease-in; }
+  .beat.on { opacity:1; }
+  .a { opacity:0; transform:translateY(48px); filter:blur(10px);
+    transition:opacity .5s var(--ease), transform .5s var(--ease), filter .5s var(--ease); }
+  .beat.on .a { opacity:1; transform:none; filter:none; transition-delay:calc(var(--d, 0s) + .3s); }
+  .beat.slow .a { transition-duration:.9s; }
+  html.instant .beat, html.instant .a, html.instant #dark { transition:none !important; }
+
+  .label { font-family:'Geist Mono', monospace; font-weight:500; font-size:26px; letter-spacing:0.28em;
+    text-transform:uppercase; color:var(--mut); margin-bottom:44px; }
+  .label b { color:var(--acc); font-weight:500; }
+  .line { font-weight:600; font-size:104px; line-height:1.06; letter-spacing:-0.035em; max-width:1664px; }
+  .line.xl { font-size:112px; }
+  #dark { color:var(--fg); transition:color .6s ease; }
+  .beat.on #dark { color:var(--acc); transition-delay:1.1s; }
+
+  .stats { display:flex; gap:32px; width:1664px; justify-content:center; }
+  .stat { width:533px; padding-top:40px; border-top:2px solid rgba(243,239,232,0.14); text-align:left; position:relative; }
+  .stat::before { content:''; position:absolute; top:-2px; left:0; width:72px; height:2px; background:var(--acc); }
+  .num { font-weight:600; font-size:184px; line-height:1; letter-spacing:-0.045em; color:var(--acc);
+    font-variant-numeric:tabular-nums; margin-left:-8px; }
+  .cap { margin-top:28px; font-family:'Geist Mono', monospace; font-size:26px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--mut); line-height:1.4; }
+
+  .logo { width:168px; height:168px; margin-bottom:40px; }
+  .beat.on .logo.a { transition-duration:1.1s; }
+  .logo.a { transform:translateY(24px) scale(.82); }
+  .intro-title { font-size:112px; font-weight:600; letter-spacing:-0.04em; line-height:1.05; }
+  .intro-title span { font-weight:300; color:var(--mut); }
+  .sub { margin-top:36px; font-size:42px; font-weight:400; line-height:1.3; color:var(--mut); letter-spacing:-0.01em;
+    max-width:1400px; text-wrap:balance; }
+  .end-title { font-size:168px; font-weight:600; letter-spacing:-0.05em; line-height:1; }
+  .url { margin-top:56px; font-family:'Geist Mono', monospace; font-weight:500; font-size:44px; color:var(--acc); letter-spacing:0.02em; }
+  .foot { font-family:'Geist Mono', monospace; font-size:22px; letter-spacing:0.22em; text-transform:uppercase; color:var(--mut); }
+  .foot.first { margin-top:72px; }
+  .foot.gh { margin-top:16px; text-transform:none; letter-spacing:0.08em; color:rgba(160,170,186,0.8); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><radialGradient id="lit" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFE2B0"/><stop offset="1" stop-color="#F28A2E"/></radialGradient></defs>
+  <symbol id="logo" viewBox="0 0 64 64">
+    <circle cx="32.00" cy="40.20" r="3.40" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.95"/>
+    <circle cx="26.47" cy="40.60" r="2.90" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.85"/>
+    <circle cx="21.54" cy="38.29" r="2.50" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.78"/>
+    <circle cx="17.72" cy="33.70" r="2.13" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.71"/>
+    <circle cx="15.87" cy="27.29" r="1.78" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.64"/>
+    <circle cx="16.72" cy="19.86" r="1.45" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.57"/>
+    <circle cx="20.72" cy="12.46" r="1.12" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.51"/>
+    <circle cx="27.93" cy="6.32" r="0.80" fill="#4A4945" stroke="#8F8E86" stroke-width="0.6" opacity="0.45"/>
+    <circle cx="32.00" cy="23.80" r="3.40" fill="url(#lit)" opacity="1.00"/>
+    <circle cx="37.53" cy="23.40" r="2.90" fill="url(#lit)" opacity="0.94"/>
+    <circle cx="42.46" cy="25.71" r="2.50" fill="url(#lit)" opacity="0.90"/>
+    <circle cx="46.28" cy="30.30" r="2.13" fill="url(#lit)" opacity="0.85"/>
+    <circle cx="48.13" cy="36.71" r="1.78" fill="url(#lit)" opacity="0.81"/>
+    <circle cx="47.28" cy="44.14" r="1.45" fill="url(#lit)" opacity="0.77"/>
+    <circle cx="43.28" cy="51.54" r="1.12" fill="url(#lit)" opacity="0.74"/>
+    <circle cx="36.07" cy="57.68" r="0.80" fill="url(#lit)" opacity="0.70"/>
+    <circle cx="32.0" cy="32.0" r="2.6" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  </symbol>
+</svg>
+
+<div id="stage">
+  <section class="beat"></section>
+  <section class="beat">
+    <div class="label a"><b>●</b>&nbsp;3 May 2019 · Puri, Odisha</div>
+    <div class="line xl a" style="--d:.35s">Cyclone Fani makes landfall.</div>
+  </section>
+  <section class="beat"><div class="line a">1.2 million people were<br>evacuated in time.</div></section>
+  <section class="beat"><div class="line xl a" style="font-weight:400;color:var(--mut)">Eleven days later…</div></section>
+  <section class="beat"><div class="line xl a">Puri still had no mains power.</div></section>
+  <section class="beat"><div class="line a">Nobody could say which sites<br>would <span id="dark">go dark.</span></div></section>
+  <section class="beat">
+    <div class="stats">
+      <div class="stat a"><div class="num" data-count="3325" data-dec="0">3,325</div><div class="cap">Critical sites ranked</div></div>
+      <div class="stat a" style="--d:.4s"><div class="num" data-count="0.97" data-dec="2">0.97</div><div class="cap">AUC against NASA satellites</div></div>
+      <div class="stat a" style="--d:.8s"><div class="num" data-count="5" data-dec="0">5</div><div class="cap">Indian languages</div></div>
+    </div>
+  </section>
+  <section class="beat">
+    <svg class="logo a"><use href="#logo"/></svg>
+    <div class="intro-title a" style="--d:.35s"><span>Introducing</span> ShadowCast</div>
+    <div class="sub a" style="--d:.75s">Names the sites a cyclone will knock out, and when.</div>
+  </section>
+  <section class="beat slow">
+    <svg class="logo a" style="width:140px;height:140px;margin-bottom:36px"><use href="#logo"/></svg>
+    <div class="end-title a" style="--d:.3s">ShadowCast</div>
+    <div class="sub a" style="--d:.7s">Names the sites a cyclone will knock out, and when,<br>then checks itself by satellite after landfall.</div>
+    <div class="url a" style="--d:1.2s">shadowcast-two.vercel.app</div>
+    <div class="foot first a" style="--d:1.7s">Team Argmax · Build with AI: Code for Communities · Track 5</div>
+    <div class="foot gh a" style="--d:1.9s">github.com/tsathya98/shadowcast</div>
+  </section>
+</div>
+
+<script>
+  const beats = [...document.querySelectorAll('.beat')];
+  const stage = document.getElementById('stage');
+  const outCubic = v => 1 - Math.pow(1 - v, 3);
+  let cur = 0, idleTimer, countRaf;
+
+  const fit = () => stage.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
+
+  // Count stat numbers up from zero, each starting when its card's entry delay elapses (instant = final values).
+  const countUp = (beat, instant) => {
+    cancelAnimationFrame(countRaf);
+    const nums = [...beat.querySelectorAll('[data-count]')];
+    if (!nums.length) return;
+    const start = performance.now();
+    const tick = now => {
+      let running = false;
+      nums.forEach((n, i) => {
+        const k = instant ? 1 : outCubic(Math.min(1, Math.max(0, ((now - start) / 1000 - 0.3 - 0.4 * i) / 1.0)));
+        const v = +n.dataset.count * k;
+        n.textContent = +n.dataset.dec ? v.toFixed(+n.dataset.dec) : Math.round(v).toLocaleString('en-US');
+        running ||= k < 1;
+      });
+      if (running) countRaf = requestAnimationFrame(tick);
+    };
+    tick(start);
+  };
+
+  const go = (n, instant = false) => {
+    cur = Math.max(0, Math.min(beats.length - 1, n));
+    beats.forEach((b, i) => b.classList.toggle('on', i === cur));
+    countUp(beats[cur], instant);
+    history.replaceState(null, '', '#' + cur);
+  };
+
+  addEventListener('resize', fit);
+  addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(cur + 1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
+    else if (e.key === 'f' || e.key === 'F') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+  });
+  addEventListener('click', () => go(cur + 1));
+  addEventListener('mousemove', () => {
+    document.body.classList.remove('idle');
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => document.body.classList.add('idle'), 2000);
+  });
+
+  fit();
+  idleTimer = setTimeout(() => document.body.classList.add('idle'), 2000);
+  const start = parseInt(location.hash.slice(1), 10);
+  if (start > 0) {
+    document.documentElement.classList.add('instant');
+    go(start, true);
+    requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.remove('instant')));
+  } else go(0);
+  document.fonts.ready.then(() => (window.__ready = true));
+</script>
+</body>
+</html>
