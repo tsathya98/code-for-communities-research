@@ -7,7 +7,8 @@ Prices come from Google's public pricing pages, read on 27 Sep 2026 (Vertex AI g
 | Service | What we use | Free allowance | Our cost |
 |---|---|---|---|
 | Vertex AI, Gemini 3.8 Flash (global) | Duty analyst, advisory drafts, reading bulletin PDFs and satellite images, voice questions | None. Introductory price $0.75 in / $3.75 out per 1M tokens until 31 Dec 2026, then $1.50 / $7.50 | The only real cost: about 2–3 US cents per question |
-| Gemini 2.5 Flash TTS | Advisory audio | None. $0.50 per 1M text tokens in, $10 per 1M audio tokens out (25 tokens per second of audio) | About 1.5 US cents per minute of audio |
+| Gemini Live (`gemini-live-2.5-flash-native-audio`) | Live voice calls with the analyst | None. $3 per 1M audio tokens in, $12 per 1M audio tokens out; each turn re-bills the call so far | Roughly 3 to 5 US cents a minute of talk (estimate) |
+| Gemini 2.5 Flash TTS | Advisory audio and spoken chat replies | None. $0.50 per 1M text tokens in, $10 per 1M audio tokens out (25 tokens per second of audio) | About 1.5 US cents per minute of audio |
 | Cloud Run `shadowcast-geo` | 1 vCPU, 1 GiB, scales to zero, at most 3 instances | 180,000 vCPU-s, 360,000 GiB-s and 2M requests a month | ₹0 at demo and pilot traffic |
 | Cloud Run job `shadowcast-archiver` | Four runs a day, about 20 s each | 240,000 vCPU-s a month for jobs | ₹0 (about 2,400 vCPU-s a month) |
 | Cloud Scheduler | 1 job | 3 jobs per billing account | ₹0 |
@@ -18,7 +19,7 @@ Prices come from Google's public pricing pages, read on 27 Sep 2026 (Vertex AI g
 | Google Maps JavaScript API | Dynamic Maps loads | 10,000 loads a month, then $7 per 1,000 | ₹0 unless public traffic |
 | Vercel | Next.js console and Gemini routes | Hobby plan free (non-commercial) | ₹0; Pro is $20 per seat per month |
 
-Budget `shadowcast-monthly` is ₹1,000, with alerts at 50, 90 and 100% plus a forecast alert. Actual spend to date is in the Cloud console under **Billing › Reports**; billing export to BigQuery is not set up, so it can't be read from the CLI.
+Budget `shadowcast-monthly` is ₹2,000 (raised from ₹1,000 on 30 Sep 2026), with alerts at 50, 90 and 100% plus a forecast alert. Actual spend to date is in the Cloud console under **Billing › Reports**; billing export to BigQuery is not set up, so it can't be read from the CLI.
 
 ## Estimated Gemini cost per action
 
