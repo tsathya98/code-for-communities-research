@@ -2,7 +2,7 @@
 
 **Length:** about 4:20 (limit 5:00), so you have 40 seconds spare.
 **Site:** https://shadowcast-two.vercel.app, Chrome full screen, zoom 100%.
-**Slides:** `video/intro-and-endcard.html` (F = full screen, Right = next), and deck slides 4, 8, 10 and 12 from `pitch-deck/ShadowCast-deck.pdf` (open it in Chrome, press F11 for full screen, arrow keys to change page).
+**Slides:** `video/intro-and-endcard.html` (F = full screen, Right = next), and deck slides 10 and 12 from `pitch-deck/ShadowCast-deck.pdf` (open it in Chrome, press F11 for full screen, arrow keys to change page).
 **Narration:** "..." means pause. The fillers are optional.
 
 ## Before recording
@@ -22,7 +22,7 @@
 
 ## 0:26 to 0:39 · The solution
 
-**Show:** deck slide 4. Point at the Mot shelter card, then run the cursor along the four steps.
+**Show:** stay on the ShadowCast reveal slide while you say this, then switch to the site tab.
 
 **Say:**
 > Hi, I'm Sathya from Team Argmax. So, ShadowCast tells a district officer which sites and roads a cyclone is going to knock out, and when, up to 68 hours ahead.
@@ -69,14 +69,13 @@
 **Show:**
 1. **Prove** tab: **AUC 0.97**, then the light-loss chart.
 2. Scroll to **Satellite evidence**, then **Storm surge vs IMD**.
-3. Deck slide 8 (5 s). Point at the Hudhud row.
 
 **Say:**
 > So how do we know it's right? On the Prove tab, NASA's night light pictures show which substations actually went dark. Above a hundred knots, they lost a median of 77 percent of their light. The outage model we trained scores 0.97... even when each stretch of coast is held out.
 >
 > Gemini reads the same images and, um, finds that Khordha, Puri and Cuttack went dark, which agrees with the forecast. And the surge model gives 2.3 metres on the Puri coast, against IMD's 1.5.
 >
-> *(slide 8)* On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
+> On Hudhud, a storm in Andhra the model never saw, it scores 0.79.
 
 ## 3:38 to 3:48 · Dana forecast
 
