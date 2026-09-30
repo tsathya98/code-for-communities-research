@@ -1,0 +1,18 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-09-27T00:30:00Z" },
+  "title": "ShadowCast pitch deck",
+  "cover": "cover",
+  "order": ["cover", "problem", "gap", "loop", "product", "gemini", "data", "validation", "impact", "architecture", "scale", "ask"],
+  "sections": {
+    "s1": { "description": "Who the officer is and why cyclone warnings leave them guessing", "start": "cover" },
+    "s2": { "description": "The Predict, Prioritise, Prepare, Prove loop, the live console and Gemini's role", "start": "loop" },
+    "s3": { "description": "Public data, satellite-scored validation and measurable impact", "start": "data" },
+    "s4": { "description": "How it runs today, how it scales and what we ask for", "start": "architecture" }
+  },
+  "faces": {
+    "geist": { "family": "Geist", "href": "https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap" },
+    "geist-mono": { "family": "Geist Mono", "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..600&display=swap" }
+  },
+  "designSystems": []
+}

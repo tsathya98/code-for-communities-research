@@ -1,0 +1,21 @@
+<section id="data" data-transition="fade" style="background:#f3efe8; color:#14161a; font-family:'Geist', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:36px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#b35a0f">Data</p>
+<h2 style="font-size:72px; font-weight:600; line-height:1.1; letter-spacing:-1px">Real storms, real sites, real outages</h2>
+</div>
+<table style="font-size:24px; color:#14161a; padding:10px 18px">
+<tr><th style="width:20%">Layer</th><th style="width:46%">Source</th><th style="width:34%">Used for</th></tr>
+<tr><td style="width:20%">Tracks, forecasts</td><td style="width:46%">IBTrACS (NOAA); ECMWF ensemble as issued</td><td style="width:34%">Wind, rain; 36–52 members</td></tr>
+<tr><td style="width:20%">Official warnings</td><td style="width:46%">IMD bulletins (PDF); NDMA SACHET; GDACS</td><td style="width:34%">Read by Gemini; live feed</td></tr>
+<tr><td style="width:20%">Sites, roads</td><td style="width:46%">OpenStreetMap; OSDMA cyclone shelters</td><td style="width:34%">3,325 sites; arterial roads</td></tr>
+<tr><td style="width:20%">People, districts</td><td style="width:46%">WorldPop; geoBoundaries (Earth Engine)</td><td style="width:34%">Exposure; parametric cover</td></tr>
+<tr><td style="width:20%">Ground, sea floor</td><td style="width:46%">DeltaDTM, Copernicus DEM, ETOPO1</td><td style="width:34%">Surge flooding</td></tr>
+<tr><td style="width:20%">Truth</td><td style="width:46%">NASA VIIRS night lights; NASA GPM rain</td><td style="width:34%">Which sites went dark; rain</td></tr>
+</table>
+<p style="font-size:32px; line-height:1.4; color:#14161a"><b>Nothing synthetic.</b> Every input is public, pulled through Earth Engine or open APIs, and credited in the repository.</p>
+<div style="position:absolute; left:128px; right:128px; bottom:64px; height:34px; display:flex; flex-direction:row; justify-content:space-between">
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#5d636c">SHADOWCAST · TEAM ARGMAX</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#5d636c">07</p>
+</div>
+<aside>Every layer is real and public. Tracks come from IBTrACS, forecasts are ECMWF's ensemble exactly as issued. The official side is IMD's bulletins, which Gemini reads, plus NDMA's SACHET warnings and GDACS for the live feed. Sites and arterial roads come from OpenStreetMap and Odisha's shelter list. Earth Engine supplies population, district boundaries, bare-earth coastal ground, sea-floor depth for the surge model, and the two truths we score against: NASA's night lights for outages and NASA's GPM satellite for rain.</aside>
+</section>

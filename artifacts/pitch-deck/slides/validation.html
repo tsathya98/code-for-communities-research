@@ -1,0 +1,40 @@
+<section id="validation" data-transition="fade" style="background:#0e1012; color:#f3efe8; font-family:'Geist', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; letter-spacing:4px; text-transform:uppercase; color:#f28a2e">Validation</p>
+<h2 style="font-size:72px; font-weight:600; line-height:1.1; letter-spacing:-1px">Every model scored against what really happened</h2>
+</div>
+<div style="display:flex; flex-direction:row; gap:48px">
+<div style="width:440px; display:flex; flex-direction:column; gap:20px">
+<p style="font-size:24px; line-height:1.4; color:#a0aaba">Fani: median night-light loss at substations, by modelled peak wind</p>
+<div style="height:260px; display:flex; flex-direction:row; align-items:end; gap:20px; border-bottom:2px solid #4a4f57">
+<div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba">0%</p><div style="width:100%; height:4px; background:#4a4f57; border-radius:4px 4px 0px 0px"></div></div>
+<div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba">0%</p><div style="width:100%; height:4px; background:#4a4f57; border-radius:4px 4px 0px 0px"></div></div>
+<div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba">2%</p><div style="width:100%; height:8px; background:#4a4f57; border-radius:4px 4px 0px 0px"></div></div>
+<div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#f28a2e">77%</p><div style="width:100%; height:190px; background:#f28a2e; border-radius:4px 4px 0px 0px"></div></div>
+</div>
+<div style="display:flex; flex-direction:row; gap:20px">
+<p style="flex:1; font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba; text-align:center">&lt;60</p>
+<p style="flex:1; font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba; text-align:center">60–80</p>
+<p style="flex:1; font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba; text-align:center">80–100</p>
+<p style="flex:1; font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#a0aaba; text-align:center">100+ kt</p>
+</div>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<table style="font-size:24px; color:#f3efe8; padding:12px 14px">
+<tr><th style="width:28%; color:#a0aaba">Storm</th><th style="width:24%; color:#a0aaba; text-align:right">Outage AUC</th><th style="width:28%; color:#a0aaba; text-align:right">Surge vs IMD</th><th style="width:20%; color:#a0aaba; text-align:right">Rain ρ</th></tr>
+<tr><td style="width:28%">Fani 2019</td><td style="width:24%; text-align:right">0.97 · 0.97*</td><td style="width:28%; text-align:right">2.3 vs 1.5 m</td><td style="width:20%; text-align:right">0.72</td></tr>
+<tr><td style="width:28%">Hudhud 2014</td><td style="width:24%; text-align:right; color:#f28a2e">0.79</td><td style="width:28%; text-align:right">1.7 vs 1.4 m</td><td style="width:20%; text-align:right">0.85</td></tr>
+<tr><td style="width:28%">Amphan 2020</td><td style="width:24%; text-align:right">0.44 fails</td><td style="width:28%; text-align:right">3.8 vs 4.6 m</td><td style="width:20%; text-align:right">0.14</td></tr>
+<tr><td style="width:28%">Dana 2024</td><td style="width:24%; text-align:right">5 outages</td><td style="width:28%; text-align:right">2.8 vs 1–2 m</td><td style="width:20%; text-align:right">0.96</td></tr>
+</table>
+<p style="font-size:24px; line-height:1.4; color:#a0aaba">Outage truth: NASA VIIRS night lights. Surge: IMD's reported height (Hudhud from a tide gauge). Rain: rank correlation with NASA GPM. *Spatial holdout.</p>
+</div>
+<img src="/_blob/29a20aa7106c21fa71c7feaf0b85ef12" alt="Prove tab of the live console: before and after VIIRS night-light images of Fani, marked Agrees with ShadowCast, with Gemini's reading that Khordha, Puri and Cuttack went totally dark" style="width:322px; height:400px; object-fit:contain; background:#15171b; border:1px solid #2c3036; border-radius:16px">
+</div>
+<p style="font-size:24px; line-height:1.4; color:#f3efe8">Amphan fails on outages and rain: wind barely varies over land in the model and the rural grid failed widely. A physics fix made Fani worse (0.87), so we reverted it and publish the miss.</p>
+<div style="position:absolute; left:128px; right:128px; bottom:64px; height:34px; display:flex; flex-direction:row; justify-content:space-between">
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">SHADOWCAST · TEAM ARGMAX · FULL RECORD IN THE REPO</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">08</p>
+</div>
+<aside>Three models, each scored against independent truth, and on the right the live Prove tab, where Gemini reads the same before and after night-light images and agrees that Khordha, Puri and Cuttack went dark. Outages: the two-parameter model fitted on Fani scores 0.97, and 0.97 again when each stretch of coast is hidden in turn; on Hudhud, a storm it never saw, 0.79. Surge: the physics model lands in the right range for all four storms against IMD's reports, running high on narrow shelves, which is typical of this kind of model. Rain: rank correlation with NASA's GPM satellite is 0.72 to 0.96, except Amphan. Amphan is our honest failure on both outages and rain, and we publish it. A physics fix we tried made Fani worse, so we rejected it by a rule set in advance.</aside>
+</section>
