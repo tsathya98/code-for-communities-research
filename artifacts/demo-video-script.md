@@ -13,11 +13,9 @@
 - Allow the microphone for the site, and say the Hindi question aloud twice beforehand.
 - For the live call, wear headphones (otherwise the analyst hears itself and stops talking) and set the screen recorder to capture system audio as well as your microphone, so the analyst's voice is in the video. A call lasts at most four minutes.
 - Every approval is written to the audit log and published on the public CAP feed. Rehearse with **Reject**, and approve only in the take you keep.
-- Gemini takes 5 to 10 seconds to answer a question and longer to draft an advisory. Keep recording through the wait and cut it in editing; don't talk over it.
+- Gemini takes 5 to 10 seconds to answer a question and longer to draft an advisory. Keep recording through the wait and cut it in editing. Don't talk over it.
 - Record the screen with Snipping Tool (Win+Shift+R) or OBS, and the voice separately if the room is noisy.
 - Hide the bookmarks bar and turn on Do Not Disturb.
-
----
 
 ## 0:00 to 0:22 · Cold open
 
@@ -71,7 +69,7 @@
 7. Click **CAP feed** in the card's footer. The feed opens in a new tab with the new alert at the top. Hold for 3 seconds, then close the tab.
 
 **Say:**
-> Mot shelter is first of 3,325 sites. Its access road, NH316, closes at a quarter past four on the morning of landfall.
+> This is Mot shelter's own panel. Its access road, NH316, closes at a quarter past four on the morning of landfall.
 >
 > This is Prepare. With Gemini Live on Vertex AI, I can simply call the analyst and ask in Hindi. *(ask, then let it answer for about 8 seconds)* It answers aloud using numbers from our geo service, and I can cut in at any time.
 >
@@ -116,8 +114,6 @@
 > Our ask is one cyclone season running alongside OSDMA.
 >
 > ShadowCast. Know what the storm will break, before it breaks.
-
----
 
 ## Facts behind every line
 
