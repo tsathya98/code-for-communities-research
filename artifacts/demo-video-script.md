@@ -22,13 +22,14 @@
 ## 0:00 to 0:26 · Cold open
 
 **Show:** the intro slides, full screen. Start recording on slide 0 (black), then press Right as you begin each sentence.
-1. "3 May 2019 · Puri, Odisha / Cyclone Fani makes landfall."
-2. "1.2 million people were evacuated in time."
-3. "Eleven days later…"
-4. "Puri still had no mains power."
+The slides are drawn like the console itself: a dark map of the Odisha coast with site dots, glass cards and a replay timeline along the bottom.
+1. **Landfall** alert card: "Cyclone Fani makes landfall at Puri." The storm eye pulses over Puri.
+2. **Evacuated 1.2 M** readout tile and "1.2 million people evacuated in time."
+3. "Eleven days later…" The timeline runs forward from 3 May to 14 May.
+4. **Still dark** alert card: "Puri still had no mains power." The site dots go dark outward from Puri.
 5. "Nobody could say which sites would go dark." Let "go dark" turn orange.
-6. The three stat cards (3,325 · 0.97 · 5). Say nothing and let them count up, about 3 seconds.
-7. "Introducing ShadowCast", about 2 seconds, then switch to the deck.
+6. Three readout tiles (3,325 · 0.97 · 5). Say nothing and let them count up, about 3 seconds.
+7. The ShadowCast header pill with "Names the sites a cyclone will knock out, and when", about 2 seconds, then switch to the deck.
 
 **Say:**
 > In May 2019, Cyclone Fani hit Puri. ... Odisha evacuated 1.2 million people in time. ... Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. ... The warnings gave the storm's track. But nobody could say which of those sites would go dark.
