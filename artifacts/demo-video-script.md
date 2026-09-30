@@ -15,7 +15,7 @@
 
 ## 0:00 to 0:26 · Cold open
 
-**Show:** intro slides. Start on black, then press Right at each sentence. Let the three stat tiles count up (about 3 s), then show the ShadowCast reveal (about 2 s).
+**Show:** intro slides. Start on black, then press Right at each sentence. Let the three stat tiles count up (about 3 s), then show the ShadowCast reveal (about 2 s). **Leave this tab open on the reveal slide.** You come back to it at the very end.
 
 **Say:**
 > In May 2019, Cyclone Fani hit Puri. ... Odisha evacuated 1.2 million people in time. ... Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. ... The warnings gave the storm's track. But nobody could say which of those sites would go dark.
@@ -87,14 +87,14 @@
 
 ## 3:48 to 4:20 · Close
 
-**Show:** open the Storm menu (3 s), then deck slide 10 (8 s), deck slide 12 (6 s), then the end card (intro slide 8).
+**Show:** open the Storm menu (3 s), then deck slide 10 (8 s), then deck slide 12 (6 s). For the last line, switch to the intro tab and press Right once to bring up the end card (or open `intro-and-endcard.html#8`). Say the last line over it, hold 3 s, then stop recording.
 
 **Say:**
 > We've already built three coasts, with alerts in Odia, Telugu and Bengali. It all runs on Google Cloud and Vercel, with Gemini on Vertex AI and no stored keys. One Odisha cyclone season for thirty officers costs about 5,300 rupees a month.
 >
 > Our ask is one cyclone season running alongside OSDMA.
 >
-> ShadowCast. Know what the storm will break, before it breaks.
+> *(end card)* ShadowCast. Know what the storm will break, before it breaks.
 
 ## Sources
 
