@@ -20,16 +20,16 @@
 **Say:**
 > In May 2019, Cyclone Fani hit Puri. ... Odisha evacuated 1.2 million people in time. ... Eleven days later, Puri district still had no mains power for its hospitals, water works and shelters. ... The warnings gave the storm's track. But nobody could say which of those sites would go dark.
 
-## 0:26 to 0:49 · The solution
+## 0:26 to 0:53 · The solution
 
 **Show:** stay on the reveal slide, then switch to the site tab.
 
 **Say:**
 > Hi, I'm Sathya from Team Argmax. ShadowCast tells a district officer which sites and roads a cyclone will knock out, and when, up to 68 hours ahead.
 >
-> And none of what you'll see is synthetic. It's four real cyclones, 3,325 real sites from OpenStreetMap, and an outage model we trained on NASA satellite data.
+> And none of what you'll see is synthetic. Real cyclone tracks from NOAA and ECMWF, 3,325 real sites from OpenStreetMap, and an outage model we trained on NASA satellite data, pulled through Google Earth Engine.
 
-## 0:49 to 1:30 · The Brief
+## 0:53 to 1:34 · The Brief
 
 **Show:**
 1. Fani 2019, **Best track**, **Brief** tab. Drag the timeline to **2 May, 13:00 IST**.
@@ -44,7 +44,7 @@
 >
 > *(press Play)* Watch the roads turn amber as they close.
 
-## 1:30 to 2:27 · Prepare
+## 1:34 to 2:31 · Prepare
 
 **Show:**
 1. Click the **District administration** card. Mot shelter opens. Point at **99%**, then **Access road 3 May 04:15**.
@@ -63,7 +63,7 @@
 >
 > *(click the draft)* Gemini drafts the alert in English, Hindi and Odia. ... *(approve)* Once an officer approves, it's live on a CAP feed that SACHET can read.
 
-## 2:27 to 2:50 · Prove
+## 2:31 to 2:54 · Prove
 
 **Show:**
 1. **Prove** tab. Point at **AUC 0.97**.
@@ -72,14 +72,14 @@
 **Say:**
 > Did it work? NASA's night lights show which substations actually went dark. The outage model we trained on that scores 0.97... and 0.79 on Hudhud, a storm it never saw. *(satellite images)* Gemini reads the same images, and agrees.
 
-## 2:50 to 3:01 · Dana forecast
+## 2:54 to 3:05 · Dana forecast
 
 **Show:** Storm menu, **Dana 2024**, then click **T−68h** straight away. Let the forecast tracks sit on the map (4 s).
 
 **Say:**
 > And this is Cyclone Dana, with the forecast exactly as it was issued, 68 hours out.
 
-## 3:01 to 3:30 · Close
+## 3:05 to 3:34 · Close
 
 **Show:** deck page 10 (6 s), then page 12 (5 s). For the last line, switch to the intro tab and press Right once for the end card. Hold 3 s, then stop recording.
 
@@ -94,7 +94,7 @@
 
 | Line | Source |
 |---|---|
-| Four real cyclones, 3,325 OSM sites, model trained on NASA VIIRS night lights | Live geo API, [validation-results.md](validation-results.md) |
+| Tracks from NOAA (IBTrACS) and ECMWF open data, 3,325 OSM sites, model trained on NASA VIIRS night lights via Google Earth Engine | Live geo API, README data sources, [validation-results.md](validation-results.md) |
 | 1.2 million evacuated | NBC News, 3 May 2019 |
 | Puri without power 11 days later | Business Standard (PTI), 14 May 2019 |
 | 917 sites, 254 in 3 h | Live Brief at 2 May 13:00 IST |
