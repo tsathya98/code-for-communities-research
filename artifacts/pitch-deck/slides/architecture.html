@@ -23,15 +23,15 @@
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px 64px">
-<p style="font-size:24px; line-height:1.45; color:#f3efe8"><b>No keys.</b> Vercel signs in to Google Cloud through Workload Identity Federation.</p>
-<p style="font-size:24px; line-height:1.45; color:#f3efe8"><b>Cloud-only data.</b> Cloud Storage and Firestore's free tier; nothing on local disk.</p>
-<p style="font-size:24px; line-height:1.45; color:#f3efe8"><b>Human in the loop.</b> Signed approvals; alerts marked Exercise until an agency adopts them.</p>
-<p style="font-size:24px; line-height:1.45; color:#f3efe8"><b>Tested.</b> 100% test coverage, strict typing, CI on every push, budget alarm.</p>
+<p style="font-size:24px; line-height:1.45; color:#f3efe8">Vercel signs in to Google Cloud through Workload Identity Federation, so no keys are stored.</p>
+<p style="font-size:24px; line-height:1.45; color:#f3efe8">Data lives in Cloud Storage and Firestore; nothing is kept on local disk.</p>
+<p style="font-size:24px; line-height:1.45; color:#f3efe8">An officer signs each approval, which publishes the alert on the CAP feed, marked Exercise.</p>
+<p style="font-size:24px; line-height:1.45; color:#f3efe8">100% line coverage on the model and shared code, strict typing, CI on every push, a budget alarm.</p>
 </div>
-<p style="font-size:24px; line-height:1.45; color:#f3efe8; border-top:1px solid #2c3036; padding:24px 0px 0px 0px"><b style="color:#f28a2e">Cheap to run.</b> About ₹5,300 a month for one Odisha cyclone season with 30 officers. Cloud Run, Firestore, Maps and Earth Engine stay in free tiers; Gemini is the main cost.</p>
+<p style="font-size:24px; line-height:1.45; color:#f3efe8; border-top:1px solid #2c3036; padding:24px 0px 0px 0px">One Odisha cyclone season for 30 officers costs <b style="color:#f28a2e">about ₹5,300 a month</b>. Most of that is Gemini; Cloud Run, Firestore, Maps and Earth Engine stay inside their free tiers.</p>
 <div style="position:absolute; left:128px; right:128px; bottom:64px; height:34px; display:flex; flex-direction:row; justify-content:space-between">
 <p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">SHADOWCAST · TEAM ARGMAX</p>
 <p style="font-family:'Geist Mono', 'Courier New', monospace; font-size:24px; color:#8b96aa">10</p>
 </div>
-<aside>Everything on this slide is running now. The console and Gemini routes are on Vercel. Gemini runs on Vertex AI with tools and PDF, image and audio input, and every officer decision and every Gemini reading lands in Firestore. The Python geo service on Cloud Run computes wind, surge, rain, road closures and parametric triggers from scenarios built with Earth Engine, and serves the live feed a scheduled Cloud Run job archives every six hours. There are no stored keys and no local storage: everything is in Cloud Storage and Firestore's free tier. Full test coverage and CI, because a state agency will ask. And it is cheap: for one Odisha cyclone season with 30 district officers we estimate about 5,300 rupees a month at today's Gemini prices, rising to about 8,800 when introductory pricing ends. Cloud Run, Firestore, Scheduler, Maps and Earth Engine all stay inside their free allowances; Gemini is the main cost, plus Vercel's paid plan.</aside>
+<aside>Everything on this slide is running now. The console and Gemini routes are on Vercel. Gemini runs on Vertex AI with tools and PDF, image and audio input, and every officer decision and every Gemini reading lands in Firestore. The Python geo service on Cloud Run computes wind, surge, rain, road closures and parametric triggers from scenarios built with Earth Engine, and serves the live feed a scheduled Cloud Run job archives every six hours. An approved alert is published on a standard CAP feed. There are no stored keys and no local storage: everything is in Cloud Storage and Firestore's free tier. Test coverage and CI are in place because a state agency will ask for them. Running cost: for one Odisha cyclone season with 30 district officers we estimate about 5,300 rupees a month at today's Gemini prices, rising to about 8,800 when introductory pricing ends. Cloud Run, Firestore, Scheduler, Maps and Earth Engine all stay inside their free allowances; Gemini is the main cost, plus Vercel's paid plan.</aside>
 </section>
