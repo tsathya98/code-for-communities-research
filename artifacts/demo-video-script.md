@@ -59,7 +59,7 @@ Before recording:
 >
 > *(click draft)* It checks IMD's bulletin first, then drafts a Common Alerting Protocol message, the format India's SACHET system uses, in English, Hindi and Odia.
 >
-> Nothing goes out on its own: I approve or reject, the approval is signed on the server, and it's logged in Firestore. *(approve)* Gemini's text-to-speech then reads it in Odia, for radio and phone.
+> ShadowCast drafts and formats the alert for SACHET; by design, an officer presses send. I approve or reject, the approval is signed on the server, and it's logged in Firestore. *(approve)* Gemini's text-to-speech then reads it in Odia, for radio and phone.
 
 ## 2:55–3:50 · Prove: the satellites check everything
 
